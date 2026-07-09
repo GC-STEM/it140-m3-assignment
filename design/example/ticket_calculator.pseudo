@@ -1,0 +1,27 @@
+START ticket_calculator
+
+    # Initialize constants (do not change during program).
+    LET REGULAR_PRICE = 10
+    LET DISCOUNT_PRICE = 7
+    LET AGE_THRESHOLD_CHILD = 12
+    LET AGE_THRESHOLD_SENIOR = 65
+
+    # Ask the user for their age and store it as input.
+    PUT "Enter your age:"
+    GET customer_age
+
+    # Decide which ticket price to use.
+    IF customer_age <= AGE_THRESHOLD_CHILD OR customer_age >= AGE_THRESHOLD_SENIOR
+        LET ticket_price = DISCOUNT_PRICE
+    ELSE
+        LET ticket_price = REGULAR_PRICE
+    ENDIF
+
+    # Show the final ticket price to the user.
+    PUT "Your ticket price is: $ {ticket_price}"
+
+END ticket_calculator
+
+
+# === References ===
+# GitHub. (2026, March 22). *Suggestions during coding* [AI code completion suggestion]. GitHub Copilot in Visual Studio Code. No URL available.

@@ -1,0 +1,93 @@
+<mxfile host="65bd71144e">
+    <diagram id="vkG-8T1RtX4ROJiOImHk" name="Flowchart">
+        <mxGraphModel dx="769" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h4&gt;Ticket Calculator Flowchart&lt;/h4&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="255" y="10" width="340" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Start" style="strokeWidth=2;shape=mxgraph.flowchart.terminator;aspect=fixed;fontSize=12;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="374.9999999999999" y="160" width="100" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div&gt;Initialize &lt;br&gt;price and age constants&lt;/div&gt;" style="verticalLabelPosition=middle;verticalAlign=middle;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.27;fontSize=12;strokeWidth=2;aspect=fixed;labelPosition=center;align=center;spacing=2;whiteSpace=wrap;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="374.9999999999999" y="240" width="100" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=none;html=1;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;br&gt;Customer age" style="strokeWidth=2;shape=manualInput;rounded=1;size=26;arcSize=11;fontSize=12;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;aspect=fixed;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="374.9999999999999" y="348" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;" parent="1" source="6" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="10" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3092" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-3" y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;html=1;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="11" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2622" y="1" relative="1" as="geometry">
+                        <mxPoint x="1" y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Age&lt;br&gt;&amp;lt;= 12 or&lt;br&gt;&amp;gt;= 65?" style="strokeWidth=2;shape=mxgraph.flowchart.decision;fontSize=12;aspect=fixed;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="374.9999999999999" y="438" width="100" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Ticket price = discount price" style="rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=12;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;aspect=fixed;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="438" width="100" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Ticket price = regular price" style="rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=12;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;aspect=fixed;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="436" width="100" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=none;html=1;" parent="1" source="16" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Ticket price message" style="strokeWidth=2;shape=mxgraph.flowchart.display;aspect=fixed;fontSize=12;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="374.9999999999999" y="549" width="100" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="7" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="275" y="583"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="570" y="583"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="End" style="strokeWidth=2;shape=mxgraph.flowchart.terminator;aspect=fixed;fontSize=12;whiteSpace=wrap;spacing=2;labelBackgroundColor=none;labelBorderColor=none;fontColor=default;html=1;container=0;" parent="1" vertex="1">
+                    <mxGeometry x="374.9999999999999" y="659" width="100" height="38" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="lZDq7mJbefy3nteSuFau" name="References">
+        <mxGraphModel dx="1159" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="YRCKZGG4Yke72CXfwxTH-1" value="&lt;h4&gt;Flowchart References&lt;/h4&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="40" width="270" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="YRCKZGG4Yke72CXfwxTH-2" value="&lt;div style=&quot;line-height: 2; margin-left: 2em; text-indent:-2em;&quot; class=&quot;csl-bib-body&quot;&gt;&lt;div class=&quot;csl-entry&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); text-indent: -2em; background-color: transparent;&quot;&gt;ANSI. (1973). &lt;/span&gt;&lt;i style=&quot;color: rgb(63, 63, 63); text-indent: -2em; background-color: transparent;&quot;&gt;Flowchart symbols and their usage in information processing&lt;/i&gt;&lt;span style=&quot;color: rgb(63, 63, 63); text-indent: -2em; background-color: transparent;&quot;&gt; (X3.5-1970). NIST. &lt;/span&gt;&lt;a style=&quot;text-indent: -2em; background-color: transparent;&quot; href=&quot;https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub24.pdf&quot;&gt;https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub24.pdf&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;csl-bib-body&quot; style=&quot;line-height: 2; margin-left: 2em; text-indent:-2em;&quot;&gt;&lt;br&gt;  &lt;span class=&quot;Z3988&quot; title=&quot;url_ver=Z39.88-2004&amp;amp;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;amp;rft.type=document&amp;amp;rft.title=Flowcharting%20Techniques%20(GC20-8152-1)&amp;amp;rft.publisher=International%20Business%20Machine&amp;amp;rft.identifier=https%3A%2F%2Fweb.archive.org%2Fweb%2F20120402204237%2Fhttp%3A%2F%2Fwww.fh-jena.de%2F~kleine%2Fhistory%2Fsoftware%2FIBM-FlowchartingTechniques-GC20-8152-1.pdf&amp;amp;rft.au=undefined&amp;amp;rft.date=1970-03&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;csl-entry&quot;&gt;&lt;span style=&quot;text-indent: -2em; background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;IBM. (1970, March). &lt;/span&gt;&lt;i style=&quot;text-indent: -2em; background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;Flowcharting Techniques (GC20-8152-1)&lt;/i&gt;&lt;span style=&quot;text-indent: -2em; background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;. International Business Machine. &lt;/span&gt;&lt;a style=&quot;text-indent: -2em; background-color: transparent;&quot; href=&quot;https://web.archive.org/web/20120402204237/http://www.fh-jena.de/~kleine/history/software/IBM-FlowchartingTechniques-GC20-8152-1.pdf&quot;&gt;https://web.archive.org/web/20120402204237/http://www.fh-jena.de/~kleine/history/software/IBM-FlowchartingTechniques-GC20-8152-1.pdf&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;csl-entry&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div class=&quot;csl-entry&quot;&gt;ISO. (1985). &lt;i&gt;Information processing—Documentation symbols and conventions for data, program and system flowcharts, program network charts and system resources charts&lt;/i&gt; (5807:1985; Edition 1). International Standards Organization [ISO]. &lt;a href=&quot;https://www.scribd.com/document/519991367/ISO-5807-1985&quot;&gt;https://www.scribd.com/document/519991367/ISO-5807-1985&lt;/a&gt; (90.93 (Confirmed in 2019))&lt;br&gt;&lt;/div&gt;  &lt;span title=&quot;url_ver=Z39.88-2004&amp;amp;ctx_ver=Z39.88-2004&amp;amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;amp;rft.type=standard&amp;amp;rft.title=Information%20processing%20%E2%80%94%20Documentation%20symbols%20and%20conventions%20for%20data%2C%20program%20and%20system%20flowcharts%2C%20program%20network%20charts%20and%20system%20resources%20charts&amp;amp;rft.publisher=International%20Standards%20Organization%20%5BISO%5D&amp;amp;rft.description=Defines%20symbols%20to%20be%20used%20in%20information%20processing%20documentation%20and%20gives%20guidance%20on%20conventions%20tor%20their%20use%20in%20data%20flowcharts%2C%20program%20flowcharts%2C%20system%20flowcharts%2C%20program%20network%20charts%2C%20system%20resources%20charts.%20Applicable%20in%20conjunction%20with%20ISO%202382%2F1.&amp;amp;rft.identifier=https%3A%2F%2Fwww.scribd.com%2Fdocument%2F519991367%2FISO-5807-1985&amp;amp;rft.au=undefined&amp;amp;rft.date=1985-02-15&amp;amp;rft.tpages=29&amp;amp;rft.language=en&quot; class=&quot;Z3988&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="120" width="710" height="490" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

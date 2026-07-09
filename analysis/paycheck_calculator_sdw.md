@@ -1,8 +1,8 @@
 # Software Development Worksheet
 
 - **Course**: {{CS 000}} - {{Course Title}}
-- **Activity**: {{ModNum}}-{{ActNum}}: {{ActivityTitle}}
-- **Program Name**: {{Program-Name}}
+- **Activity**: 3-3: Intro to Flowcharts and Pseudocode
+- **Program Name**: `paycheck_calculator`
 
 Use this worksheet to record the information you need before writing code. Keep your answers brief. Refer to the Software Requirements Specification (SRS) and, when provided, the Software Design Document (SDD).
 

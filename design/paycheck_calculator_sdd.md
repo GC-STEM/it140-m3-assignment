@@ -1,8 +1,8 @@
 # Software Design Document
 
 - **Course**: IT 140 - Introduction to Scripting
-- **Activity**: {{ModNum}}-{{ActNum}}: {{ActivityTitle}}
-- **Program Name**: {{Program-Name}}
+- **Activity**: 3-3: Intro to Flowcharts and Pseudocode
+- **Program Name**: `paycheck_calculator`
 
 ## 0. General Description
 
