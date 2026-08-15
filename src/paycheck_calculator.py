@@ -1,42 +1,30 @@
-"""Calculate gross pay for an employee based on hours worked.
+"""TODO: Replace with a one-line summary of the optional practice program.
 
-Inputs:
-- REGULAR_RATE (float): Regular rate of pay ($/hr).
-- OT_MULTIPLIER (float): Overtime pay multiplier (1.5x regular rate).
-- OT_THRESHOLD (float): Overtime threshold (hrs/wk).
-- hours_worked (float): Number of hours entered by the user via input.
+Input:
+    TODO: Identify the major input, including its type and source.
 
-Processing:
-- Applies regular pay up to 40 hours and overtime pay (1.5 times rate)
-  for any additional hours worked.
+Process:
+    TODO: Summarize the decision and paycheck calculation from your design.
 
-Outputs:
-- gross_pay (float): Total pay displayed to the console as currency.
-
-Typical usage example:
-    Enter hours worked: 48
-    Gross pay is: $1,040.00
+Output:
+    TODO: Identify the major output, including its type and destination.
 """
 
 # === Constants ===
-# TODO: Initialize constants for regular rate, overtime multiplier, and overtime threshold.
+REGULAR_RATE = 20
+OVERTIME_RATE = 30
+REGULAR_HOURS_LIMIT = 40
 
 
 # === Main Function ===
 def main() -> None:
-    """Run the program."""
+    """Run the optional paycheck calculator practice program."""
 
-    # Get hours worked from user.
-    # TODO: Prompt user for hours worked and convert to float.
+    # TODO: Get the employee's hours worked as a number.
 
-    # Decide how to calculate regular and overtime hours.
-    # TODO: Use conditional logic to determine regular and overtime hours based on OT_THRESHOLD.
+    # TODO: Use decision branching to calculate weekly pay from your design.
 
-    # Calculate regular, overtime, and gross pay.
-    # TODO: Calculate regular pay, overtime pay, and gross pay using the constants and hours worked.
-
-    # Display gross pay message
-    # TODO: Format gross pay as currency and display to console.
+    # TODO: Display the calculated weekly paycheck.
 
 
 # === Main Guard ===
@@ -45,4 +33,4 @@ if __name__ == "__main__":
 
 
 # === References ===
-# TODO: Add references to any resources used to complete this assignment.
+# TODO: Add an APA-style reference for a source you used, or delete this line.

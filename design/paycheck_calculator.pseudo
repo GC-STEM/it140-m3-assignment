@@ -1,22 +1,19 @@
-START paycheck_calculator
+# IT 140 Module Three Assignment
+# Paycheck Calculator Pseudocode Template
+#
+# Complete the TODO prompts below with your own pseudocode.
+# Keep this file in .pseudo format for submission.
+#
+# Your finished pseudocode should represent the same logic as your flowchart.
+# Use clear indentation and appropriate pseudocode keywords such as
+# INPUT, LET, IF, ELSE, and OUTPUT where they fit your design.
 
-    # Initialize constants for pay rates and overtime threshold.
-    # TODO: Add pseudocode here to initialize constants for pay rates and overtime threshold.
+BEGIN
+    TODO: Obtain the required program input.
 
-    # Get hours worked from user.
-    # TODO: Add pseudocode here to prompt the user for hours worked and convert to float.
+    TODO: Use decision branching to determine which paycheck rule applies.
+        TODO: Show the processing steps for one branch.
+        TODO: Show the processing steps for the other branch.
 
-    # Decide how to calculate regular and overtime hours.
-    # TODO: Add pseudocode here to use conditional logic to determine regular and overtime hours based on OT_THRESHOLD.
-
-    # Calculate regular, overtime, and gross pay.
-    # TODO: Add pseudocode here to calculate regular pay, overtime pay, and gross pay.
-
-    # Display gross pay message.
-    # TODO: Add pseudocode here to display the gross pay message to the user.
-
-END paycheck_calculator
-
-
-# === References ===
-# TODO: Add references to any resources used to complete this assignment.
+    TODO: Output the calculated weekly paycheck.
+END

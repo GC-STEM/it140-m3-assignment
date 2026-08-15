@@ -1,0 +1,65 @@
+name: Report a problem
+description: Report a technical problem with the Module Three assignment repository or provided files.
+title: "[Problem]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for reproducible technical problems with the repository, starter files, documentation, or course tools. Do not post completed assignment solutions or private information.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Repository setup or Git/GitHub
+        - README or Wiki documentation
+        - Flowchart template or Draw.io
+        - Pseudocode template or pseudocode support
+        - Optional Python practice
+        - Optional tests
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Codio Virtual Desktop (CVD)
+        - Windows local course IDE
+        - macOS local course IDE
+        - Linux local course IDE
+        - GitHub website
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead? Include the exact error message when applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest sequence of steps that reproduces the problem.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed passwords, tokens, student information, and other private information.
+          required: true
+        - label: I did not include or request a completed solution to the graded assignment.
+          required: true

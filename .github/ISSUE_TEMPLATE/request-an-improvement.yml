@@ -1,0 +1,40 @@
+name: Request an improvement
+description: Suggest an improvement to the Module Three repository, documentation, starter files, or student workflow.
+title: "[Improvement]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Repository structure
+        - README or Wiki documentation
+        - Flowchart template
+        - Pseudocode template
+        - Optional Python practice
+        - Optional tests
+        - Git/GitHub workflow
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current experience
+      description: What is confusing, difficult, incomplete, or inefficient now?
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: What change would make the repository clearer or easier to use?
+    validations:
+      required: true
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Academic integrity
+      options:
+        - label: This request does not include or ask for a completed solution to the graded assignment.
+          required: true

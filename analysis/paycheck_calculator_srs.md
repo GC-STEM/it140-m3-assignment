@@ -1,63 +1,67 @@
-# Software Requirements Specification
+# Software Requirements Specification (SRS)
 
 - **Course**: IT 140 - Introduction to Scripting
-- **Activity**: 3-3: Intro to Flowcharts and Pseudocode
-- **Program Name**: `paycheck_calculator`
+- **Activity**: Module Three Assignment
+- **Program name**: Paycheck Calculator
+- **Status**: Provided requirements reference; do not edit
 
 ## 0. General Description
 
-{{TODO: Replace with a general description of the program derived from the assignment guidelines and rubric (G&R), such as what the program will do, who the intended users are, and any important context or background information that is relevant to understanding the requirements for this program.}}
+The Paycheck Calculator is a small program design for calculating an employee's weekly paycheck from the number of hours worked during a week. The design must represent the company's regular-pay and overtime-pay rules and produce the employee's total weekly paycheck.
+
+This SRS reorganizes requirements from the Module Three Assignment Guidelines and Rubric. If this file and the current Guidelines and Rubric differ, follow the Guidelines and Rubric.
 
 ## 1. Functional Requirements
 
 The program shall:
 
-- [ ] 1.1 {{TODO: Replace with specific functional requirements for this program derived from the G&R}}
+- **1.1** Obtain the number of hours the employee worked during the week.
+- **1.2** Apply a rate of **$20 per hour** to the first **40 hours** worked.
+- **1.3** Apply a rate of **$30 per hour** to each hour worked **above 40 hours**.
+- **1.4** Use decision branching so the appropriate pay calculation is performed for the hours worked.
+- **1.5** Calculate the employee's total weekly paycheck.
+- **1.6** Output the calculated weekly paycheck.
 
-## 2. Nonfunctional Requirements
+## 2. Design Requirements
 
-The program shall:
+The graded design shall include both of the following artifacts:
 
-- [ ] 2.1 {{TODO: Replace in template with common nonfunctional requirements for this program derived from G&R}}
+- **2.1 Flowchart**: A `.drawio` flowchart that organizes the solution using appropriate symbols and arrows for:
+  - Start and end points
+  - Input and output
+  - Decision branching
+  - Processing steps
+- **2.2 Pseudocode**: A `.pseudo` file that details the solution using logically ordered steps, appropriate indentation, and appropriate pseudocode keywords.
+- **2.3** The flowchart and pseudocode shall represent the same program behavior.
+- **2.4** The decision logic shall account for all input values covered by the two pay rules: hours at or below the regular/overtime boundary and hours above that boundary.
 
-## 3. Technology Constraints
+## 3. Technology and File Constraints
 
-The program shall:
+- **3.1** The flowchart deliverable shall remain in Draw.io format (`.drawio`).
+- **3.2** The pseudocode deliverable shall remain a pseudocode text file (`.pseudo`).
+- **3.3** Python construction and testing are optional practice for this assignment and are not graded deliverables.
 
-- [ ] 3.1 {{TODO: Replace in template with common technology constraints for this program derived from the G&R}}
+## 4. Acceptance Conditions
 
-- [ ] 3.x {{TODO: Replace with any activity-specific technology constraints derived from the G&R.}}
+A design is ready for submission when it can be followed to produce the correct paycheck for ordinary and boundary cases and when it satisfies the flowchart and pseudocode criteria in the current assignment rubric.
 
-## 4. Quality of Service Constraints
+The following numeric cases are useful for checking the design logic. They are not required output formats.
 
-The program shall:
+| Hours worked | Expected weekly paycheck | Purpose |
+| ---: | ---: | --- |
+| 20 | $400 | Regular-hours case |
+| 40 | $800 | Boundary case: no overtime hours |
+| 41 | $830 | First hour above the boundary |
+| 60 | $1,400 | Assignment example |
 
-- [ ] 4.1 {{TODO: Replace in template with common quality of service constraints for this program derived from G&R}}
+## 5. Out of Scope Unless Your Instructor Adds a Requirement
 
-- [ ] 4.x {{TODO: Replace with any activity-specific quality of service constraints, such as performance, reliability, or security requirements.}}
+The assignment Guidelines and Rubric does not specify requirements for:
 
-## Sample Input and Output
+- Rejecting negative values
+- Limiting the maximum number of hours
+- Re-prompting after invalid input
+- Payroll deductions or taxes
+- Exact wording or currency formatting of optional Python output
 
-{{TODO: Replace with any activity-specific notes about program input and output, such as formatting requirements or constraints on user input.}}
-
-User program prompts and output are in normal font. User input is in **bold font**.
-
-### Sample Run 1
-
-```text
-
-TODO: Replace with sample input and output for this program
-
-```
-
-### Sample Run 2
-
-```text
-
-TODO: Replace with sample input and output for this program
-
-```
-
-## Acceptance Test Cases
-
-{{TODO: Replace with acceptance test cases derived from the G&R and the sample input and output. Include normal, boundary, and invalid-input cases as applicable. For each test case, identify the requirement(s) being tested, the test input or condition, the expected result, and the pass criteria.}}
+Do not add these as graded requirements unless your instructor or current course materials direct you to do so.

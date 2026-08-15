@@ -1,50 +1,21 @@
-name: Run Tests
+# This workflow is intentionally disabled because Python construction and testing
+# are optional practice for the Module Three Assignment. Rename to tests.yml only
+# if course maintainers intentionally decide to enable automated practice checks.
+name: Optional Python Practice Tests
 
 on:
   push:
-  pull_request:
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  test:
-    name: Run unittest and Ruff checks
-    runs-on: ubuntu-latest
-
+  practice-tests:
+    runs-on: ubuntu-24.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: "pip"
-
-      - name: Install tools
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install ruff
-
-      - name: Show Python version
-        run: python --version
-
-      - name: Run Ruff linter
-        run: |
-          echo "## Ruff Linter Results" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Ruff checks your Python files for common code issues." >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-
-          python -m ruff check . --output-format=github
-
-      - name: Run unit tests
-        run: |
-          echo "## Unit Test Results" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Unit tests check whether the program behaves as expected." >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-
-          python -m unittest discover -s tests -p "test*.py" -v
+      - name: Run optional acceptance tests
+        run: python3 tests/test_paycheck_calculator.py
