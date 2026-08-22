@@ -1,12 +1,8 @@
-<!--
-Draft artifact for human review.
-Target repository: GC-STEM/it140-m3-assignment
-Draft date: 2026-08-15
--->
+<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
 
 # IT 140 Module Three Assignment
 
-- **Course**: IT 140 - Introduction to Scripting
+- **Course**: IT 140 - *Introduction to Scripting*
 - **Activity**: Module Three Assignment
 - **Design problem**: Employee Paycheck Calculator
 - **Graded deliverables**: `paycheck_calculator.drawio` and `paycheck_calculator.pseudo`
@@ -54,6 +50,7 @@ You will create your own personal GitHub repository from this course repository 
 - Push your work to GitHub for backup
 - Continue working from your own copy of the assignment
 - Practice a professional repository-based development workflow
+- Use automated repository checks while you work
 
 The main assignment folders are:
 
@@ -89,7 +86,8 @@ You may also edit these working or practice files:
 - [`paycheck_calculator_sdw.md`](paycheck_calculator_sdw.md) — recommended Software Development Worksheet (SDW) notes; not submitted for grading
 - [`src/paycheck_calculator.py`](src/paycheck_calculator.py) — optional Python construction practice; not submitted for grading
 
-Leave the READMEs, SRS, SDD, tests, repository configuration, and other provided files unchanged unless your instructor or course instructions tell you otherwise.
+> [!IMPORTANT]
+> Do not modify the READMEs, SRS, SDD, tests, `.github` files, repository configuration, or other provided files. The automated repository checks treat those files as course-managed content.
 
 ## Set Up Your Personal Assignment Repository
 
@@ -98,10 +96,6 @@ Complete these steps only once before beginning the assignment.
 If you already created an `it140-m3-assignment` repository in your GitHub account or already have an `it140-m3-assignment` folder in `~/Repos`, do not repeat these setup steps. Open your existing repository instead.
 
 If you need to start over, see [Reset Your Assignment Repository](#reset-your-assignment-repository).
-
-### 0. Complete the Module One Setup Tasks
-
-If you have not completed the [Module One Setup Tasks](https://github.com/GC-STEM/it140-m1-setup-tasks) on the Codio Virtual Desktop (CVD) or your local computer, do so now. Return here after completing those tasks.
 
 ### 1. Open the VS Code Integrated Terminal
 
@@ -118,28 +112,23 @@ You will use the integrated terminal in VS Code to create and clone your persona
 
 1. Type the following command in the VS Code integrated terminal:
 
-   ```bash
-   gh auth status
-   ```
+   `gh auth status`
 
-2. Review the results and identify the active account.
+2. Review the results and identify the **active account**.
+
    - If your IT 140 GitHub account is listed but is not active, continue to Step 2.3.
    - If your IT 140 GitHub account is not listed, continue to Step 2.4.
-   - If the correct IT 140 GitHub account is active, continue to Step 3.
+   - If the correct IT 140 GitHub account is active, continue to Step 2.6.
 
 3. If your IT 140 GitHub account is listed but is not active, type the following command, replacing `your-github-username` with your GitHub username:
 
-   ```bash
-   gh auth switch --user your-github-username
-   ```
+   `gh auth switch --user your-github-username`
 
    Then return to Step 2.1 to confirm that the correct account is now active.
 
 4. If your IT 140 GitHub account is not listed, type:
 
-   ```bash
-   gh auth login --web
-   ```
+   `gh auth login --web`
 
    Follow the GitHub CLI prompts and sign in with the GitHub account you use for IT 140.
 
@@ -153,7 +142,7 @@ The following command block will:
 
 1. Go to your course `Repos` folder.
 2. Configure Git to use your GitHub CLI authentication.
-3. Star the original IT 140 assignment repository so it is easier to find again.
+3. Bookmark the original IT 140 assignment repository so it is easier to find again.
 4. Create your personal assignment repository in GitHub from the current course template.
 5. Make your personal repository private.
 6. Clone your new repository to your CVD or local computer.
@@ -171,7 +160,7 @@ cd it140-m3-assignment
 git remote -v
 ```
 
-Review the final output and confirm that the repository belongs to your GitHub account.
+Review the final output and confirm that the repository belongs to **your GitHub account**.
 
 If a command reports an error, do not repeat the entire command block. Review the error message and use the [Help and Support](#help-and-support) resources before continuing.
 
@@ -232,7 +221,9 @@ Testing is **not required for the Module Three Assignment grade**, but it provid
 
 Save your files normally while you work in VS Code.
 
-Periodically commit and push your assignment work so your personal GitHub repository contains a current backup. From the repository root in the VS Code integrated terminal, run:
+Periodically commit and push your assignment work so your personal GitHub repository contains a current backup. You can do this using the **Source Control** tools in the VS Code user interface, or from the command line as described below.
+
+From the repository root in the VS Code integrated terminal, run:
 
 ```bash
 cd ~/Repos/it140-m3-assignment
@@ -245,14 +236,39 @@ git push
 These commands:
 
 - Show which files have changed.
-- Stage the student working, graded deliverable, and optional practice files for this assignment.
+- Stage only the student working, graded deliverable, and optional practice files for this assignment.
 - Create a Git commit containing those changes.
 - Push the commit to your personal GitHub repository.
 
 If Git reports that there is nothing to commit, your local files do not contain any new changes that need to be saved to GitHub.
 
 > [!NOTE]
-> GitHub is used to develop and back up your work. Assignment submission, grading, and instructor feedback remain in D2L Brightspace.
+> GitHub is used to develop and back up your work. **Assignment submission, grading, and instructor feedback remain in D2L Brightspace.**
+
+## Review the Automated Repository Checks
+
+Each time you push changes to GitHub, the **Assignment Checks** workflow runs automatically in your personal repository.
+
+While you are still working, a red **X** can simply mean that one or both graded design files are not finished yet. As you complete and push your work, the checks verify that:
+
+- The provided repository files are still present and unchanged.
+- Your committed changes are limited to the student working and optional practice files identified above.
+- Both graded design files differ from their starter state.
+- `design/paycheck_calculator.drawio` remains a readable Draw.io XML file.
+- `design/paycheck_calculator.pseudo` keeps its `BEGIN` / `END` structure and no longer contains starter `TODO:` prompts.
+- Repository configuration and provided Markdown files remain readable and internally consistent.
+
+The active Assignment Checks **do not run or grade the optional Python program or its optional acceptance tests**. You may use those practice tools separately after your graded design work is complete.
+
+To review a check:
+
+1. Open your `it140-m3-assignment` repository on GitHub.
+2. Select **Actions**.
+3. Open the most recent **Assignment Checks** run.
+4. Open **Check assignment repository** to see which check passed or needs attention.
+
+> [!NOTE]
+> A green check means your repository passed these automated checks. It does **not** assign a grade, guarantee a particular grade, evaluate the quality of your flowchart or pseudocode, or submit your assignment. Follow the official Module Three Assignment Guidelines and Rubric in D2L Brightspace for submission and grading requirements.
 
 ## Return to an Existing Assignment
 
@@ -358,7 +374,7 @@ The [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignmen
 - Optional testing and debugging practice
 - Sources, citations, and AI use
 
-Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided course repository, starter files, documentation, or course tools.
+Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided course repository, starter files, documentation, automated checks, or course tools.
 
 Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for repository-related questions when appropriate. Do not ask for or post completed solutions to the graded flowchart or pseudocode.
 
@@ -380,9 +396,23 @@ Confirm that:
   - `.drawio`
   - `.pseudo`
 - Your latest work is backed up in your personal GitHub repository.
+- You reviewed the latest Assignment Checks result as a development aid.
 
 Follow the **What to Submit** instructions in the Module Three Assignment Guidelines and Rubric to submit the two required design files in D2L Brightspace.
 
 Do **not** submit the SDW, SRS, SDD, optional Python program, tests, README files, or your GitHub repository unless the Module Three Assignment Guidelines and Rubric or your instructor specifically instructs you to do so.
 
-GitHub does not submit your assignment for grading.
+**GitHub does not submit your assignment for grading.**
+
+<!-- Artifact Metadata
+
+* Course: IT 140 - Introduction to Scripting
+* Artifact Title: Module Three Assignment | Start Here
+* Artifact Type: Required assignment guidance and repository workflow
+* Artifact Purpose: Guide students from the official D2L assignment requirements through personal GitHub repository setup, the SDLC design workflow, backup, automated repository checks, recovery, and final D2L submission.
+* Artifact Description: Students analyze the paycheck-calculator requirements, create the graded flowchart and pseudocode, optionally construct and test Python code, save work to GitHub, review automated repository checks, and return to D2L Brightspace to submit the required design files.
+* Artifact Version: {{semantic version number}}
+* Artifact Date: {{artifact date in YYYY-MM-DD format}}
+* Development Status: {{development status}}
+
+-->

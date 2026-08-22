@@ -1,3 +1,5 @@
+<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+
 # Analyze Phase | Understand the Paycheck Requirements
 
 **SDLC progress:** [Start Here](../README.md) → **1 Analyze** → [2 Design](../design/README.md) → [3 Construct (Practice)](../src/README.md) → [4 Test (Practice)](../tests/README.md) → [Submit](../README.md#submit-your-assignment)
@@ -44,8 +46,25 @@ You do not need Python code to answer these questions.
 
 For supplemental explanations, see the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki).
 
+Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for questions about using the repository or the provided analysis materials.
+
+Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided repository files or tools.
+
 For assignment requirements, grading, or feedback, contact your instructor through D2L Brightspace.
 
 ## Next Step
 
 Continue to the [Design Phase](../design/README.md) to create the two graded assignment deliverables.
+
+<!-- Artifact Metadata
+
+* Course: IT 140 - Introduction to Scripting
+* Artifact Title: Module Three Assignment | Analyze Phase
+* Artifact Type: Required assignment guidance; no Analyze-phase deliverable submitted for grading
+* Artifact Purpose: Guide students through analyzing the paycheck-calculator requirements before designing the solution.
+* Artifact Description: Students review the official assignment requirements and provided SRS, identify the required input, processing rules, decision point, output, and 40-hour boundary, and optionally record working notes in the SDW.
+* Artifact Version: {{semantic version number}}
+* Artifact Date: {{artifact date in YYYY-MM-DD format}}
+* Development Status: {{development status}}
+
+-->

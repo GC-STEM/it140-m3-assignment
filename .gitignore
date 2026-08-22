@@ -1,10 +1,140 @@
+# WARNING: Do NOT modify this file.
+# If there is a problem with it, submit a GitHub issue or pull request to fix it.
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-.pytest_cache/
-.ruff_cache/
-.coverage
+*.py[codz]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
 htmlcov/
-.venv/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter / IPython
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Environments
+.env
+.envrc
+.venv
+env/
 venv/
+ENV/
+env.bak/
+venv.bak/
+.pdm-python
+.pdm-build/
+.pixi
+__pypackages__/
+
+# Python tooling
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+.ruff_cache/
+.pypirc
+
+# Framework/tool caches
+.scrapy/
+.pybuilder/
+target/
+site/
+.streamlit/secrets.toml
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+*.vsix
+tempCodeRunnerFile.py
+
+# JetBrains IDEs
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/aws.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/contentModel.xml
+.idea/**/mongoSettings.xml
+.idea/**/httpRequests
+.idea/**/caches/build_file_checksums.ser
+.idea/**/sonarlint/
+.idea/sonarlint.xml
+.idea_modules/
+*.iws
+out/
+atlassian-ide-plugin.xml
+
+# Operating-system files
 .DS_Store
 Thumbs.db
+
+# Codio configuration and generated content
+.codio
+.guides/
+.project-setup/
+.tmp/

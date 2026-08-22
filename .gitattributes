@@ -1,5 +1,37 @@
+# WARNING: Do NOT modify this file.
+# If there is a problem with it, submit a GitHub issue or pull request to fix it.
+
+# Auto-detect text files and use LF line endings
 * text=auto eol=lf
-*.drawio text eol=lf
-*.pseudo text eol=lf
-*.md text eol=lf
+
+# Python, Markdown, pseudocode, diagrams, and plain-text files use LF
 *.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.pseudo text eol=lf
+*.drawio text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Scripts use LF line endings
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.command text eol=lf
+*.ps1 text eol=lf
+*.bat text eol=lf
+*.cmd text eol=lf
+
+# Treat common binary files as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.zip binary

@@ -1,3 +1,5 @@
+<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+
 # Construct Phase | Optional Python Practice
 
 **SDLC progress:** [Start Here](../README.md) → [1 Analyze](../analysis/README.md) → [2 Design](../design/README.md) → **3 Construct (Practice)** → [4 Test (Practice)](../tests/README.md) → [Submit](../README.md#submit-your-assignment)
@@ -61,6 +63,9 @@ python src/paycheck_calculator.py
 
 Try at least one value at or below 40 hours and one value above 40 hours.
 
+> [!NOTE]
+> The repository's active **Assignment Checks** intentionally do not compile, run, or grade your optional Python practice file in a personal repository. This prevents optional construction work from affecting the status of your required Module Three design work.
+
 ## Check Your Work
 
 Before moving to optional testing:
@@ -71,6 +76,29 @@ Before moving to optional testing:
 - [ ] It calculates a weekly paycheck.
 - [ ] Its behavior matches your flowchart and pseudocode.
 
+## Help and Support
+
+Use the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki) for supplemental repository and course-tool guidance.
+
+Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for questions about using the optional practice files.
+
+Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided starter or test files.
+
+For assignment requirements, grading, or feedback, contact your instructor through D2L Brightspace.
+
 ## Next Step
 
 Continue to the [Test Phase](../tests/README.md) for optional practice, or return to [Submit Your Assignment](../README.md#submit-your-assignment).
+
+<!-- Artifact Metadata
+
+* Course: IT 140 - Introduction to Scripting
+* Artifact Title: Module Three Assignment | Construct Phase
+* Artifact Type: Optional Python construction-practice guidance
+* Artifact Purpose: Help students translate their completed graded designs into a simple Python practice program.
+* Artifact Description: Students use their own flowchart and pseudocode to complete the optional paycheck-calculator Python starter and practice incremental construction with Module Three concepts.
+* Artifact Version: {{semantic version number}}
+* Artifact Date: {{artifact date in YYYY-MM-DD format}}
+* Development Status: {{development status}}
+
+-->

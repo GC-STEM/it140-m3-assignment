@@ -1,3 +1,5 @@
+<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+
 # Design Phase | Create the Flowchart and Pseudocode
 
 **SDLC progress:** [Start Here](../README.md) → [1 Analyze](../analysis/README.md) → **2 Design** → [3 Construct (Practice)](../src/README.md) → [4 Test (Practice)](../tests/README.md) → [Submit](../README.md#submit-your-assignment)
@@ -107,9 +109,16 @@ If one design says something the other does not, revise them until they represen
 - [ ] Appropriate pseudocode keywords are used.
 - [ ] The output is identified.
 
+> [!NOTE]
+> The GitHub **Assignment Checks** can verify basic file state, including whether both graded design files changed from the starter, whether the Draw.io file remains readable XML, and whether the pseudocode starter TODOs were replaced. The checks cannot evaluate the quality or correctness of your design. Use the assignment Guidelines and Rubric for that review.
+
 ## Help and Support
 
 For supplemental explanations about flowcharts, pseudocode, or the course tools, see the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki).
+
+Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for repository-related questions that do not ask for a completed graded solution.
+
+Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided design files, documentation, or automated checks.
 
 For assignment requirements, grading, or feedback, contact your instructor through D2L Brightspace.
 
@@ -121,3 +130,16 @@ You may now:
 
 - Go to [Submit Your Assignment](../README.md#submit-your-assignment), or
 - Continue to the [Construct Phase](../src/README.md) for optional Python practice.
+
+<!-- Artifact Metadata
+
+* Course: IT 140 - Introduction to Scripting
+* Artifact Title: Module Three Assignment | Design Phase
+* Artifact Type: Required assignment guidance for graded design deliverables
+* Artifact Purpose: Guide students in creating and reviewing the required paycheck-calculator flowchart and pseudocode.
+* Artifact Description: Students create the graded Draw.io flowchart and pseudocode, compare the two representations for consistency, and review them against the assignment rubric.
+* Artifact Version: {{semantic version number}}
+* Artifact Date: {{artifact date in YYYY-MM-DD format}}
+* Development Status: {{development status}}
+
+-->
