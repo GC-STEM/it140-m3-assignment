@@ -204,7 +204,9 @@ def check_drawio(checks: Checks) -> None:
     try:
         root = ET.parse(path).getroot()
     except (OSError, ET.ParseError) as exc:
-        checks.error(f"Invalid Draw.io XML in {path.relative_to(REPO_ROOT)}: {exc}")
+        checks.error(
+            f"Invalid Draw.io XML in {path.relative_to(REPO_ROOT)}: {exc}"
+        )
         return
 
     tag = root.tag.rsplit("}", maxsplit=1)[-1]

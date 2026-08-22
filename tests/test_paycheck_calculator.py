@@ -42,7 +42,8 @@ class PaycheckCalculatorAcceptanceTests(unittest.TestCase):
             result.stdout.replace(",", ""),
             re.compile(pattern),
             msg=(
-                f"Expected a paycheck value of {expected_pay} for {hours} hours.\n"
+                f"Expected a paycheck value of {expected_pay} for "
+                f"{hours} hours.\n"
                 f"Program output was:\n{result.stdout}"
             ),
         )

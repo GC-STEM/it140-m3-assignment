@@ -123,7 +123,9 @@ def check_source(checks: StarterChecks) -> None:
         if isinstance(node, ast.FunctionDef) and node.name == "main"
     ]
     if len(main_functions) != 1:
-        checks.error("Optional starter must contain exactly one main() function.")
+        checks.error(
+            "Optional starter must contain exactly one main() function."
+        )
     else:
         body = main_functions[0].body
         if len(body) != 1 or not is_docstring_statement(body[0]):
@@ -206,7 +208,7 @@ def check_tests(checks: StarterChecks) -> None:
     )
     if test_class is None:
         checks.error(
-            "Acceptance-test class PaycheckCalculatorAcceptanceTests is missing."
+            "Acceptance-test class PaycheckCalculatorAcceptanceTests missing."
         )
         return
 
