@@ -1,13 +1,20 @@
-"""TODO: Replace with a one-line summary of the optional practice program.
+"""TODO: Replace with a one-line summary of the program's purpose (<73 chars).
 
 Input:
-    TODO: Identify the major input, including its type and source.
+    TODO: Replace with a major input, including its type and source.
+    TODO: Replace with another major input, or delete this TODO line.
+    TODO: Replace with another major input, or delete this TODO line.
 
 Process:
-    TODO: Summarize the decision and paycheck calculation from your design.
+    TODO: Replace with a major processing step.
 
 Output:
-    TODO: Identify the major output, including its type and destination.
+    TODO: Replace with a major output, including its type and destination.
+
+Typical usage example:
+    TODO: Replace with the input prompt and original name-input example.
+    TODO: Replace with the input prompt and original age-input example.
+    TODO: Replace with the resulting output from those inputs.
 """
 
 # === Constants ===
@@ -20,7 +27,8 @@ REGULAR_HOURS_LIMIT = 40
 def main() -> None:
     """Run the optional paycheck calculator practice program."""
 
-    # TODO: Get the employee's hours worked as a number.
+    # Get the number of hours worked for the employee.
+    # TODO: Replace with code to get the employee's hours worked as a number.
 
     # TODO: Use decision branching to calculate weekly pay from your design.
 

@@ -8,12 +8,18 @@
 # Use clear indentation and appropriate pseudocode keywords such as
 # INPUT, LET, IF, ELSE, and OUTPUT where they fit your design.
 
-BEGIN
+BEGIN paycheck_calculator
+
     TODO: Obtain the required program input.
 
     TODO: Use decision branching to determine which paycheck rule applies.
         TODO: Show the processing steps for one branch.
+
         TODO: Show the processing steps for the other branch.
 
     TODO: Output the calculated weekly paycheck.
-END
+
+END paycheck_calculator
+
+# === References ===
+# TODO: List any references you used to complete this assignment.
