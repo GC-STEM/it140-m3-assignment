@@ -23,10 +23,10 @@ EXPECTED_TEST_CASES = {
 
 SOURCE_TODO_MARKERS = (
     "TODO: Replace with a one-line summary",
-    "TODO: Identify the major input",
-    "TODO: Summarize the decision and paycheck calculation",
-    "TODO: Identify the major output",
-    "TODO: Get the employee's hours worked as a number.",
+    "TODO: Replace with a major input",
+    "TODO: Replace with a major processing step.",
+    "TODO: Replace with a major output",
+    "TODO: Replace with code to get the employee's hours worked as a number.",
     "TODO: Use decision branching to calculate weekly pay from your design.",
     "TODO: Display the calculated weekly paycheck.",
 )
