@@ -37,4 +37,4 @@ if __name__ == "__main__":
 
 
 # === References ===
-# TODO: Add an APA-style reference for outside help you used, or delete this line.
+# TODO: Add APA-style reference for outside help you used, or delete this line.
