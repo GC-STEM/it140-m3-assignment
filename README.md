@@ -9,6 +9,18 @@
   - [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
   - [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
 
+> [!IMPORTANT]
+> **GitHub repository options**
+>
+> If you are completing this repository as part of your IT 140 assignment, do not use the GitHub options in the upper-right corner except as follows:
+>
+> - 🟡 **Watch — Not recommended:** Notifications may confuse students and are not needed.
+> - 🔴 **Fork — Do not use:** It will break the code later in this README file.
+> - 🟢 **Star — Recommended:** Later code will bookmark this repository so it is easier to find later.
+> - 🔴 **Use this template — Do not use:** It will break the code later in this README file.
+>
+> **Faculty**: Consider selecting **Watch** → **Custom** → **Releases + Issues** to receive major repository updates and follow reported problems.
+
 **Required assignment progress:** **0 Start Here** → [1 Analyze](analysis/README.md) → [2 Design](design/README.md) → [3 Submit](#3-submit-your-assignment)
 
 **Optional SDLC practice:** [Construct](src/README.md) → [Test](tests/README.md)
