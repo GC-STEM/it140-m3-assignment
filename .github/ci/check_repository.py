@@ -209,7 +209,9 @@ def check_json_and_toml(checks: Checks) -> None:
         lint = pyproject.get("tool", {}).get("ruff", {}).get("lint", {})
         selected = set(lint.get("select", []))
         if not {"E", "F"}.issubset(selected):
-            checks.error("pyproject.toml must keep Ruff E and F checks enabled.")
+            checks.error(
+                "pyproject.toml must keep Ruff E and F checks enabled."
+            )
     except (OSError, tomllib.TOMLDecodeError) as exc:
         checks.error(f"Invalid pyproject.toml: {exc}")
 
@@ -222,7 +224,8 @@ def check_required_text_markers(checks: Checks) -> None:
         for marker in markers:
             if marker not in text:
                 checks.error(
-                    f"Required section is missing from {relative_path}: {marker}"
+                    "Required section is missing from "
+                    f"{relative_path}: {marker}"
                 )
                 missing += 1
 
@@ -236,12 +239,17 @@ def check_drawio(checks: Checks) -> None:
     try:
         root = ET.parse(path).getroot()
     except (OSError, ET.ParseError) as exc:
-        checks.error(f"Invalid Draw.io XML in design/paycheck_calculator.drawio: {exc}")
+        checks.error(
+            "Invalid Draw.io XML in design/paycheck_calculator.drawio: "
+            f"{exc}"
+        )
         return
 
     tag = root.tag.rsplit("}", maxsplit=1)[-1]
     if tag != "mxfile":
-        checks.error("design/paycheck_calculator.drawio must have an mxfile root.")
+        checks.error(
+            "design/paycheck_calculator.drawio must have an mxfile root."
+        )
         return
 
     diagrams = [
@@ -269,9 +277,13 @@ def check_pseudocode(checks: Checks, mode: str) -> None:
         checks.error("Pseudocode BEGIN must appear before END.")
 
     if mode == "student":
-        todo_lines = [line.strip() for line in text.splitlines() if "TODO:" in line]
+        todo_lines = [
+            line.strip() for line in text.splitlines() if "TODO:" in line
+        ]
         if todo_lines:
-            checks.error("The graded pseudocode still contains starter TODO prompts.")
+            checks.error(
+                "The graded pseudocode still contains starter TODO prompts."
+            )
         else:
             checks.note("The graded pseudocode starter TODOs were replaced.")
     elif begin >= 0 and end > begin:
@@ -344,7 +356,8 @@ def check_markdown_links(checks: Checks) -> None:
                 resolved.relative_to(repo_root)
             except ValueError:
                 checks.error(
-                    f"Local link leaves the repository in {relative_path}: {target}"
+                    "Local link leaves the repository in "
+                    f"{relative_path}: {target}"
                 )
                 broken += 1
                 continue
@@ -386,7 +399,9 @@ def check_social_preview(checks: Checks) -> None:
         )
         return
 
-    checks.note(f"Social preview is valid ({width}x{height}, {len(data)} bytes).")
+    checks.note(
+        f"Social preview is valid ({width}x{height}, {len(data)} bytes)."
+    )
 
 
 def git_output(*args: str) -> str:
@@ -414,7 +429,8 @@ def student_changed_paths(checks: Checks) -> set[str] | None:
 
     if len(roots) != 1:
         checks.error(
-            "Could not identify one initial template commit for this personal repository."
+            "Could not identify one initial template commit for this personal "
+            "repository."
         )
         return None
 
@@ -449,7 +465,9 @@ def check_student_change_scope(
         )
 
     if not unexpected:
-        checks.note("Committed changes are limited to student working/practice files.")
+        checks.note(
+            "Committed changes are limited to student working/practice files."
+        )
 
 
 def check_student_graded_changes(

@@ -137,7 +137,9 @@ def check_source(checks: StarterChecks) -> None:
 
     for name, expected in expected_constants.items():
         if found_constants.get(name) != expected:
-            checks.error(f"Optional source constant {name} must remain {expected}.")
+            checks.error(
+                f"Optional source constant {name} must remain {expected}."
+            )
 
     main_functions = [
         node
@@ -145,7 +147,9 @@ def check_source(checks: StarterChecks) -> None:
         if isinstance(node, ast.FunctionDef) and node.name == "main"
     ]
     if len(main_functions) != 1:
-        checks.error("Optional starter must contain exactly one main() function.")
+        checks.error(
+            "Optional starter must contain exactly one main() function."
+        )
     else:
         body = main_functions[0].body
         if len(body) != 1 or not is_docstring_statement(body[0]):
@@ -239,7 +243,9 @@ def check_tests(checks: StarterChecks) -> None:
         None,
     )
     if test_class is None:
-        checks.error("Acceptance-test class PaycheckCalculatorAcceptanceTests missing.")
+        checks.error(
+            "Acceptance-test class PaycheckCalculatorAcceptanceTests missing."
+        )
         return
 
     test_functions = {
@@ -256,7 +262,9 @@ def check_tests(checks: StarterChecks) -> None:
         if missing:
             checks.error(f"Acceptance tests are missing: {', '.join(missing)}")
         if extra:
-            checks.error(f"Unexpected acceptance tests found: {', '.join(extra)}")
+            checks.error(
+                f"Unexpected acceptance tests found: {', '.join(extra)}"
+            )
 
     for test_name, expected_case in EXPECTED_TEST_CASES.items():
         function = test_functions.get(test_name)
@@ -282,12 +290,15 @@ def check_tests(checks: StarterChecks) -> None:
         if not found:
             hours, pay = expected_case
             checks.error(
-                f"Acceptance case changed in {test_name}; expected ({hours}, {pay})."
+                f"Acceptance case changed in {test_name}; "
+                f"expected ({hours}, {pay})."
             )
 
     expected_path = 'PROJECT_ROOT / "src" / "paycheck_calculator.py"'
     if expected_path not in text:
-        checks.error("Acceptance tests no longer target src/paycheck_calculator.py.")
+        checks.error(
+            "Acceptance tests no longer target src/paycheck_calculator.py."
+        )
 
 
 def main() -> None:
