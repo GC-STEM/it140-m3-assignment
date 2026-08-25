@@ -16,6 +16,8 @@ import xml.etree.ElementTree as ET
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
+# Student work is intentionally limited to the two graded design files,
+# optional SDW notes, and optional Python practice source.
 EDITABLE_PATHS = {
     "paycheck_calculator_sdw.md",
     "design/paycheck_calculator.drawio",
@@ -54,6 +56,7 @@ REQUIRED_FILES = (
     "tests/test_paycheck_calculator.py",
 )
 
+# Course-managed Markdown is checked in both starter and student repositories.
 PROVIDED_MARKDOWN = (
     "README.md",
     ".github/RЕADME.md",
@@ -65,42 +68,71 @@ PROVIDED_MARKDOWN = (
     "tests/README.md",
 )
 
+# These markers intentionally focus on stable document structure rather than
+# prose so routine wording changes do not require CI maintenance.
 REQUIRED_TEXT_MARKERS = {
     "README.md": (
         "# IT 140 Module Three Assignment",
-        "## Complete the Assignment",
-        "## Review the Automated Repository Checks",
+        "## 0. Meet the Prerequisites",
+        "## 1. Set Up or Open Your Assignment Repository",
+        "## 2. Complete the Assignment",
+        "## 3. Submit Your Assignment",
+        "## Optional: Continue Through Construct and Test",
         "## Help and Support",
     ),
     "analysis/README.md": (
         "# Analyze Phase",
         "## Purpose",
+        "## Deliverable",
+        "## What You Will Use",
+        "## What You Will Do",
         "## Check Your Work",
+        "## Help and Support",
     ),
     "analysis/paycheck_calculator_srs.md": (
         "# Software Requirements Specification (SRS)",
         "## 1. Functional Requirements",
-        "## 4. Acceptance Conditions",
+        "## 2. Design Requirements",
+        "## 3. Technology and File Constraints",
+        "## 4. Verification Cases",
+        "## 5. Out of Scope Unless Your Instructor Adds a Requirement",
+        "## 6. Requirements Traceability",
     ),
     "design/README.md": (
         "# Design Phase",
+        "## Purpose",
         "## Graded Deliverables",
-        "## 3. Compare the Two Designs",
+        "## What You Will Use",
+        "## What You Will Do",
+        "## 3. Create the Flowchart",
+        "## 4. Create the Pseudocode",
+        "## 5. Compare the Two Designs",
+        "## 7. Review Against the Rubric",
+        "## Help and Support",
     ),
     "design/paycheck_calculator_sdd.md": (
         "# Software Design Document (SDD)",
-        "## 2. Design Model",
+        "## 2. Solution Model",
         "## 6. Design Consistency Review",
+        "## 7. Requirements Traceability",
+        "## 9. Optional Construction Handoff",
     ),
     "src/README.md": (
         "# Construct Phase",
         "## Purpose",
-        "## Run the Program",
+        "## Deliverable",
+        "### Edit Only TODO Lines",
+        "## What You Will Do",
+        "## Check Your Work",
     ),
     "tests/README.md": (
         "# Test Phase",
-        "## 1. Test Manually",
-        "## 2. Run the Optional Acceptance Tests",
+        "## Purpose",
+        "## Deliverable",
+        "## 2. Test Manually",
+        "## 3. Optional: Run the Automated Acceptance Tests",
+        "## 4. Interpret the Results",
+        "## 5. Debug One Problem at a Time",
     ),
 }
 
@@ -144,15 +176,18 @@ def read_text(relative_path: str) -> str:
 
 def check_required_files(checks: Checks) -> None:
     """Verify required repository files exist and are nonempty."""
+    missing_or_empty = 0
     for relative_path in REQUIRED_FILES:
         path = REPO_ROOT / relative_path
         if not path.is_file():
             checks.error(f"Required file is missing: {relative_path}")
+            missing_or_empty += 1
             continue
         if path.stat().st_size == 0:
             checks.error(f"Required file is empty: {relative_path}")
+            missing_or_empty += 1
 
-    if not checks.errors:
+    if missing_or_empty == 0:
         checks.note("Required repository files are present and nonempty.")
 
 
@@ -174,23 +209,20 @@ def check_json_and_toml(checks: Checks) -> None:
         lint = pyproject.get("tool", {}).get("ruff", {}).get("lint", {})
         selected = set(lint.get("select", []))
         if not {"E", "F"}.issubset(selected):
-            checks.error(
-                "pyproject.toml must keep Ruff E and F checks enabled."
-            )
+            checks.error("pyproject.toml must keep Ruff E and F checks enabled.")
     except (OSError, tomllib.TOMLDecodeError) as exc:
         checks.error(f"Invalid pyproject.toml: {exc}")
 
 
 def check_required_text_markers(checks: Checks) -> None:
-    """Verify major provided documents keep expected sections."""
+    """Verify major course-managed documents keep expected sections."""
     missing = 0
     for relative_path, markers in REQUIRED_TEXT_MARKERS.items():
         text = read_text(relative_path)
         for marker in markers:
             if marker not in text:
                 checks.error(
-                    f"Required section is missing from {relative_path}: "
-                    f"{marker}"
+                    f"Required section is missing from {relative_path}: {marker}"
                 )
                 missing += 1
 
@@ -204,16 +236,12 @@ def check_drawio(checks: Checks) -> None:
     try:
         root = ET.parse(path).getroot()
     except (OSError, ET.ParseError) as exc:
-        checks.error(
-            f"Invalid Draw.io XML in {path.relative_to(REPO_ROOT)}: {exc}"
-        )
+        checks.error(f"Invalid Draw.io XML in design/paycheck_calculator.drawio: {exc}")
         return
 
     tag = root.tag.rsplit("}", maxsplit=1)[-1]
     if tag != "mxfile":
-        checks.error(
-            "design/paycheck_calculator.drawio must have an mxfile root."
-        )
+        checks.error("design/paycheck_calculator.drawio must have an mxfile root.")
         return
 
     diagrams = [
@@ -228,28 +256,22 @@ def check_drawio(checks: Checks) -> None:
 
 
 def check_pseudocode(checks: Checks, mode: str) -> None:
-    """Verify the pseudocode has its expected outer structure."""
+    """Verify the pseudocode keeps its expected outer structure."""
     text = read_text("design/paycheck_calculator.pseudo")
-    begin = text.find("BEGIN")
-    end = text.rfind("END")
+    begin = text.find("BEGIN paycheck_calculator")
+    end = text.rfind("END paycheck_calculator")
 
     if begin < 0:
-        checks.error("Pseudocode is missing BEGIN.")
+        checks.error("Pseudocode is missing 'BEGIN paycheck_calculator'.")
     if end < 0:
-        checks.error("Pseudocode is missing END.")
+        checks.error("Pseudocode is missing 'END paycheck_calculator'.")
     if begin >= 0 and end >= 0 and begin >= end:
         checks.error("Pseudocode BEGIN must appear before END.")
 
     if mode == "student":
-        todo_lines = [
-            line.strip()
-            for line in text.splitlines()
-            if "TODO:" in line
-        ]
+        todo_lines = [line.strip() for line in text.splitlines() if "TODO:" in line]
         if todo_lines:
-            checks.error(
-                "The graded pseudocode still contains starter TODO prompts."
-            )
+            checks.error("The graded pseudocode still contains starter TODO prompts.")
         else:
             checks.note("The graded pseudocode starter TODOs were replaced.")
     elif begin >= 0 and end > begin:
@@ -304,7 +326,7 @@ def local_link_target(raw_target: str) -> str | None:
 
 
 def check_markdown_links(checks: Checks) -> None:
-    """Verify local links in provided repository Markdown files."""
+    """Verify local links in course-managed Markdown files."""
     broken = 0
     repo_root = REPO_ROOT.resolve()
 
@@ -322,20 +344,17 @@ def check_markdown_links(checks: Checks) -> None:
                 resolved.relative_to(repo_root)
             except ValueError:
                 checks.error(
-                    f"Local link leaves the repository in {relative_path}: "
-                    f"{target}"
+                    f"Local link leaves the repository in {relative_path}: {target}"
                 )
                 broken += 1
                 continue
 
             if not resolved.exists():
-                checks.error(
-                    f"Broken local link in {relative_path}: {target}"
-                )
+                checks.error(f"Broken local link in {relative_path}: {target}")
                 broken += 1
 
     if broken == 0:
-        checks.note("Local links in provided Markdown files resolve.")
+        checks.note("Local links in course-managed Markdown files resolve.")
 
 
 def check_social_preview(checks: Checks) -> None:
@@ -367,9 +386,7 @@ def check_social_preview(checks: Checks) -> None:
         )
         return
 
-    checks.note(
-        f"Social preview is valid ({width}x{height}, {len(data)} bytes)."
-    )
+    checks.note(f"Social preview is valid ({width}x{height}, {len(data)} bytes).")
 
 
 def git_output(*args: str) -> str:
@@ -390,19 +407,14 @@ def git_output(*args: str) -> str:
 def student_changed_paths(checks: Checks) -> set[str] | None:
     """Return committed paths changed since the template root commit."""
     try:
-        roots = git_output(
-            "rev-list",
-            "--max-parents=0",
-            "HEAD",
-        ).splitlines()
+        roots = git_output("rev-list", "--max-parents=0", "HEAD").splitlines()
     except RuntimeError as exc:
         checks.error(f"Could not inspect repository history: {exc}")
         return None
 
     if len(roots) != 1:
         checks.error(
-            "Could not identify one initial template commit for this "
-            "personal repository."
+            "Could not identify one initial template commit for this personal repository."
         )
         return None
 
@@ -432,14 +444,12 @@ def check_student_change_scope(
     unexpected = sorted(changed - EDITABLE_PATHS)
     for path in unexpected:
         checks.error(
-            "Provided repository file was added, removed, renamed, or "
-            f"changed: {path}"
+            "Provided repository file was added, removed, renamed, or changed: "
+            f"{path}"
         )
 
     if not unexpected:
-        checks.note(
-            "Committed changes are limited to student working/practice files."
-        )
+        checks.note("Committed changes are limited to student working/practice files.")
 
 
 def check_student_graded_changes(
@@ -493,6 +503,8 @@ def main() -> None:
         changed = student_changed_paths(checks)
         check_student_change_scope(checks, changed)
         check_student_graded_changes(checks, changed)
+    else:
+        checks.note("Starter mode skips student completion checks.")
 
     checks.finish()
 

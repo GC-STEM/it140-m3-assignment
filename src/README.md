@@ -2,101 +2,234 @@
 
 # Construct Phase | Optional Python Practice
 
-**SDLC progress:** [Start Here](../README.md) → [1 Analyze](../analysis/README.md) → [2 Design](../design/README.md) → **3 Construct (Practice)** → [4 Test (Practice)](../tests/README.md) → [Submit](../README.md#submit-your-assignment)
+**Required assignment path:** [Start Here](../README.md) → [Analyze](../analysis/README.md) → [Design](../design/README.md) → [Submit](../README.md#3-submit-your-assignment)
+
+**Optional SDLC practice:** **Construct** → [Test](../tests/README.md)
 
 ## Purpose
 
-The Construct phase turns a design into working code.
+During Construct, a programmer turns a design into working code.
 
 For the Module Three Assignment, construction is **optional practice**. Your grade is based on the flowchart and pseudocode, not on `paycheck_calculator.py`.
 
-Complete this phase only **after** your graded design files are finished. The goal is to practice using your own design as the plan for a Python program.
+Complete this phase only **after** your two graded design files are complete and ready to submit. The purpose is to practice treating your own design as the plan for a Python program.
+
+## Deliverable
+
+**This phase does not produce a graded or submitted Module Three deliverable.**
+
+You may complete [`paycheck_calculator.py`](paycheck_calculator.py) for practice. Do not submit it for the Module Three Assignment unless your instructor specifically requests it.
 
 ## What You Will Use
 
-- Your completed [`../design/paycheck_calculator.drawio`](../design/paycheck_calculator.drawio)
-- Your completed [`../design/paycheck_calculator.pseudo`](../design/paycheck_calculator.pseudo)
-- The provided starter file [`paycheck_calculator.py`](paycheck_calculator.py)
-- Module Three decision-branching content
-- Relevant zyBooks material, especially sections on input/output, type conversion, arithmetic expressions, `if`/`else`, relational operators, Boolean expressions, and indentation
+Use:
+
+- your completed [`../design/paycheck_calculator.drawio`](../design/paycheck_calculator.drawio);
+- your completed [`../design/paycheck_calculator.pseudo`](../design/paycheck_calculator.pseudo);
+- the provided [`paycheck_calculator.py`](paycheck_calculator.py) starter;
+- the [SRS](../analysis/paycheck_calculator_srs.md) when checking requirements; and
+- Module Three decision-branching concepts.
+
+Relevant zyBooks sections include:
+
+- **1.3 Basic input and output**
+- **1.15 Numeric types: Floating-point**
+- **1.16 Arithmetic expressions**
+- **2.6 Type conversions**
+- **2.7 String formatting**
+- **3.1 If-else branches (general)**
+- **3.2 If-else statement**
+- **3.4 Equality and relational operators**
+- **3.5 Boolean operators and expressions**
+- **3.8 Code blocks and indentation**
+
+## Read the Starter Before Editing
+
+Open [`paycheck_calculator.py`](paycheck_calculator.py) and read it from beginning to end.
+
+The file is organized approximately as:
+
+```text
+Module docstring
+Constants
+Main function
+Main guard
+References
+```
+
+Some of this structure uses concepts you have not formally studied yet. It is included as instructional scaffolding so the optional program resembles the structured Python files used elsewhere in the course.
+
+### Edit Only TODO Lines
+
+For this optional practice, **change only lines marked with `TODO:`**.
+
+This includes:
+
+- `TODO:` lines inside the module docstring;
+- `# TODO:` comments inside `main()`; and
+- `# TODO:` lines in the References section.
+
+Do not change the provided constants, `main()` definition, function docstring, main guard, or other course-provided lines.
+
+When replacing a TODO inside `main()`, keep your Python code indented four spaces so it remains inside the function.
+
+## Understand the Starter Structure
+
+### Module Docstring
+
+The triple-quoted text at the top is a **module docstring**. It asks you to summarize the optional program and describe its Input → Process → Output behavior.
+
+Use your own Analyze and Design work as the source for those descriptions. The usage example should use your own input value rather than copying a repository verification case.
+
+### Constants
+
+The starter defines:
+
+```python
+REGULAR_RATE = 20
+OVERTIME_RATE = 30
+REGULAR_HOURS_LIMIT = 40
+```
+
+These values come directly from the assignment's pay rules. The uppercase names indicate that the program intends to treat them as constants.
+
+Do not change these lines for this practice activity.
+
+### Main Function
+
+All optional implementation TODOs are inside:
+
+```python
+def main() -> None:
+    """Run the optional paycheck calculator practice program."""
+```
+
+You will study functions in more depth later. For now, treat `main()` as the place where the program's main sequence of steps belongs.
+
+### Main Guard
+
+The starter ends with:
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
+This is commonly called a **main guard**. When the file is run directly, it calls `main()`.
+
+You do not need to master this structure in Module Three. Do not change it.
 
 ## What You Will Do
 
-1. Open your completed pseudocode and flowchart beside `paycheck_calculator.py`.
-2. Read one design step at a time.
-3. Replace the matching `TODO:` comment in the Python starter file with the simplest Python statement or branch that performs that step.
-4. Run the program after small changes instead of waiting until the entire program is complete.
-5. Keep your code aligned with the design. If you discover that the design is incomplete or incorrect, revise the design first and then update the code.
+### 1. Put Your Design Beside the Starter
 
-> [!IMPORTANT]
-> Do not use the optional construction work as a substitute for completing the graded flowchart and pseudocode.
+Open your completed flowchart or pseudocode to the side of `paycheck_calculator.py`.
 
-## Keep the Program Simple
+Use **your pseudocode as the primary coding guide**. Read one design step at a time and identify the Python concept that performs the same job.
 
-This is a Module Three practice program. You do not need advanced Python features.
+### 2. Complete the Documentation TODOs
 
-Focus on concepts you have already encountered:
+Use your own SDW/design work to describe:
 
-- Variables
-- Numeric input and type conversion
-- Arithmetic expressions
-- `if` / `else` decision branching
-- Relational operators
-- Output
-- Indentation
+- the program purpose;
+- input;
+- processing;
+- output; and
+- an original usage example.
 
-The starter file includes a `main()` function and main guard as organizational scaffolding. You may follow the TODOs without needing to master functions yet; functions are taught later in the course.
+The docstring is practice documentation, not a graded Module Three requirement.
 
-## Run the Program
+### 3. Complete the Input TODO
 
-From the repository root in the VS Code integrated terminal:
+Translate your design's input step into the simplest Python statement that obtains the required value in a numeric form your calculations can use.
+
+Review input and type conversion in zyBooks if needed.
+
+### 4. Complete the Decision and Processing TODOs
+
+Use the branch condition and calculations from **your own graded design**.
+
+Keep the implementation simple. Module Three concepts are sufficient:
+
+- variables;
+- arithmetic expressions;
+- `if` / `else`;
+- relational operators; and
+- indentation.
+
+If your design and code disagree, revise the design first, then update the code.
+
+### 5. Complete the Output TODO
+
+Translate the output step from your design into Python.
+
+The official assignment does not require an exact prompt or currency format for this optional implementation, so do not add complexity merely to satisfy an imagined formatting requirement.
+
+### 6. Run After Small Changes
+
+Work incrementally:
+
+1. Replace one code TODO.
+2. Run the program.
+3. Correct syntax or runtime errors.
+4. Continue only after the program runs again.
+
+This makes it easier to identify which recent change caused a problem.
+
+From the repository root:
 
 ```bash
 python3 src/paycheck_calculator.py
 ```
 
-On Windows, if `python3` is not available but the course IDE provides `python`, use:
+On Windows, if your configured environment uses `python` rather than `python3`, use:
 
 ```powershell
 python src/paycheck_calculator.py
 ```
 
-Try at least one value at or below 40 hours and one value above 40 hours.
+### 7. Complete the References Section
 
-> [!NOTE]
-> The repository's active **Assignment Checks** intentionally do not compile, run, or grade your optional Python practice file in a personal repository. This prevents optional construction work from affecting the status of your required Module Three design work.
+If you used outside sources, examples, people, IDE-generated suggestions, or generative AI assistance while completing the optional practice, acknowledge the assistance according to current SNHU and assignment guidance.
+
+If you did not use an outside source, delete the unused reference TODO line.
 
 ## Check Your Work
 
-Before moving to optional testing:
+Before moving to optional testing, make sure:
 
-- [ ] The program runs without a syntax error.
-- [ ] It accepts the hours worked.
-- [ ] It uses decision branching.
-- [ ] It calculates a weekly paycheck.
-- [ ] Its behavior matches your flowchart and pseudocode.
+- [ ] My graded flowchart and pseudocode were complete before I began optional coding.
+- [ ] I changed only TODO lines in the starter.
+- [ ] My module docstring describes this paycheck calculator, not another assignment.
+- [ ] My code follows my own pseudocode and flowchart.
+- [ ] I left the constants, `main()` definition, and main guard unchanged.
+- [ ] Code inside `main()` remains indented correctly.
+- [ ] I ran after small changes and corrected errors incrementally.
+- [ ] I added references for outside help I actually used or deleted the unused reference TODO.
+- [ ] No TODO lines remain in my completed optional file.
+- [ ] The program runs without a Python error for a normal input value.
 
 ## Help and Support
 
-Use the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki) for supplemental repository and course-tool guidance.
+If you have difficulty:
 
-Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for questions about using the optional practice files.
-
-Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided starter or test files.
-
-For assignment requirements, grading, or feedback, contact your instructor through D2L Brightspace.
+- Start with your completed pseudocode and translate one step at a time.
+- Return to [Design](../design/README.md) if the design is incomplete or inconsistent.
+- See the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki) for supplemental guidance.
+- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for questions about optional practice tools.
+- Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report technical problems with the provided starter.
+- Contact your instructor through D2L Brightspace for assignment requirements or grading questions.
 
 ## Next Step
 
-Continue to the [Test Phase](../tests/README.md) for optional practice, or return to [Submit Your Assignment](../README.md#submit-your-assignment).
+Continue to [Test](../tests/README.md) for optional practice, or return to [Submit Your Assignment](../README.md#3-submit-your-assignment).
 
 <!-- Artifact Metadata
 
 * Course: IT 140 - Introduction to Scripting
 * Artifact Title: Module Three Assignment | Construct Phase
 * Artifact Type: Optional Python construction-practice guidance
-* Artifact Purpose: Help students translate their completed graded designs into a simple Python practice program.
-* Artifact Description: Students use their own flowchart and pseudocode to complete the optional paycheck-calculator Python starter and practice incremental construction with Module Three concepts.
+* Artifact Purpose: Help students translate their completed graded designs into a simple Python program using Module Three concepts.
 * Artifact Version: {{semantic version number}}
 * Artifact Date: {{artifact date in YYYY-MM-DD format}}
 * Development Status: {{development status}}

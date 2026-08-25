@@ -1,20 +1,17 @@
-"""TODO: Replace with a one-line summary of the program's purpose (<73 chars).
+"""TODO: Replace with a one-line summary of the optional program (<73 chars).
 
 Input:
-    TODO: Replace with a major input, including its type and source.
-    TODO: Replace with another major input, or delete this TODO line.
-    TODO: Replace with another major input, or delete this TODO line.
+    TODO: Replace with the major input, including its type and source.
 
 Process:
-    TODO: Replace with a major processing step.
+    TODO: Replace with a brief description of the major processing.
 
 Output:
-    TODO: Replace with a major output, including its type and destination.
+    TODO: Replace with the major output, including its destination.
 
 Typical usage example:
-    TODO: Replace with the input prompt and original name-input example.
-    TODO: Replace with the input prompt and original age-input example.
-    TODO: Replace with the resulting output from those inputs.
+    TODO: Replace with an original hours-worked input example.
+    TODO: Replace with the resulting paycheck output for your example.
 """
 
 # === Constants ===
@@ -27,12 +24,11 @@ REGULAR_HOURS_LIMIT = 40
 def main() -> None:
     """Run the optional paycheck calculator practice program."""
 
-    # Get the number of hours worked for the employee.
-    # TODO: Replace with code to get the employee's hours worked as a number.
+    # TODO: Replace with code to obtain hours worked in a numeric form.
 
-    # TODO: Use decision branching to calculate weekly pay from your design.
+    # TODO: Replace with decision branching and processing from your design.
 
-    # TODO: Display the calculated weekly paycheck.
+    # TODO: Replace with code to display the calculated weekly paycheck.
 
 
 # === Main Guard ===
@@ -41,4 +37,4 @@ if __name__ == "__main__":
 
 
 # === References ===
-# TODO: Add an APA-style reference for a source you used, or delete this line.
+# TODO: Add an APA-style reference for outside help you used, or delete this line.

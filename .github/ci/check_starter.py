@@ -13,6 +13,7 @@ SOURCE_PATH = REPO_ROOT / "src/paycheck_calculator.py"
 TEST_PATH = REPO_ROOT / "tests/test_paycheck_calculator.py"
 PSEUDOCODE_PATH = REPO_ROOT / "design/paycheck_calculator.pseudo"
 DRAWIO_PATH = REPO_ROOT / "design/paycheck_calculator.drawio"
+SDW_PATH = REPO_ROOT / "paycheck_calculator_sdw.md"
 
 EXPECTED_TEST_CASES = {
     "test_regular_hours": (20, 400),
@@ -22,21 +23,34 @@ EXPECTED_TEST_CASES = {
 }
 
 SOURCE_TODO_MARKERS = (
-    "TODO: Replace with a one-line summary",
-    "TODO: Replace with a major input",
-    "TODO: Replace with a major processing step.",
-    "TODO: Replace with a major output",
-    "TODO: Replace with code to get the employee's hours worked as a number.",
-    "TODO: Use decision branching to calculate weekly pay from your design.",
-    "TODO: Display the calculated weekly paycheck.",
+    "TODO: Replace with a one-line summary of the optional program",
+    "TODO: Replace with the major input, including its type and source.",
+    "TODO: Replace with a brief description of the major processing.",
+    "TODO: Replace with the major output, including its destination.",
+    "TODO: Replace with an original hours-worked input example.",
+    "TODO: Replace with the resulting paycheck output for your example.",
+    "TODO: Replace with code to obtain hours worked in a numeric form.",
+    "TODO: Replace with decision branching and processing from your design.",
+    "TODO: Replace with code to display the calculated weekly paycheck.",
 )
 
 PSEUDOCODE_TODO_MARKERS = (
     "TODO: Obtain the required program input.",
-    "TODO: Use decision branching to determine which paycheck rule applies.",
-    "TODO: Show the processing steps for one branch.",
-    "TODO: Show the processing steps for the other branch.",
+    "IF TODO: Replace with the decision condition",
+    "TODO: Show the processing steps for this decision path.",
+    "TODO: Show the processing steps for the other decision path.",
     "TODO: Output the calculated weekly paycheck.",
+)
+
+SDW_REQUIRED_MARKERS = (
+    "# Software Development Worksheet (SDW)",
+    "## How to Use This Worksheet",
+    "# Analyze Phase",
+    "## 7. Analyze Checkpoint",
+    "# Design Phase",
+    "## 12. Requirements-to-Design Traceability",
+    "## 16. Ready to Submit",
+    "# Optional Construct and Test Notes",
 )
 
 EXPECTED_DIAGRAM_PAGES = {
@@ -63,6 +77,7 @@ class StarterChecks:
         if not self.errors:
             print("PASS: Course starter state is intentionally incomplete.")
             print("PASS: Graded design templates are intact.")
+            print("PASS: Optional SDW scaffolding is intact.")
             print("PASS: Optional Python practice scaffolding is intact.")
             print("PASS: Optional acceptance-test definitions are intact.")
             return
@@ -95,6 +110,15 @@ def check_source(checks: StarterChecks) -> None:
         if marker not in text:
             checks.error(f"Optional source is missing marker: {marker!r}")
 
+    # Guard against accidental M2 name/age wording in the M3 practice starter.
+    stale_markers = ("name-input", "age-input", "name_age", "birth year")
+    for marker in stale_markers:
+        if marker.lower() in text.lower():
+            checks.error(
+                "Optional source contains stale Module Two wording: "
+                f"{marker!r}"
+            )
+
     expected_constants = {
         "REGULAR_RATE": 20,
         "OVERTIME_RATE": 30,
@@ -113,9 +137,7 @@ def check_source(checks: StarterChecks) -> None:
 
     for name, expected in expected_constants.items():
         if found_constants.get(name) != expected:
-            checks.error(
-                f"Optional source constant {name} must remain {expected}."
-            )
+            checks.error(f"Optional source constant {name} must remain {expected}.")
 
     main_functions = [
         node
@@ -123,9 +145,7 @@ def check_source(checks: StarterChecks) -> None:
         if isinstance(node, ast.FunctionDef) and node.name == "main"
     ]
     if len(main_functions) != 1:
-        checks.error(
-            "Optional starter must contain exactly one main() function."
-        )
+        checks.error("Optional starter must contain exactly one main() function.")
     else:
         body = main_functions[0].body
         if len(body) != 1 or not is_docstring_statement(body[0]):
@@ -156,10 +176,12 @@ def check_source(checks: StarterChecks) -> None:
 
 
 def check_pseudocode(checks: StarterChecks) -> None:
-    """Verify the graded pseudocode template markers remain intact."""
+    """Verify graded pseudocode template markers remain intact."""
     text = PSEUDOCODE_PATH.read_text(encoding="utf-8")
-    if "BEGIN" not in text or "END" not in text:
-        checks.error("Pseudocode starter must keep BEGIN and END.")
+    if "BEGIN paycheck_calculator" not in text:
+        checks.error("Pseudocode starter must keep BEGIN paycheck_calculator.")
+    if "END paycheck_calculator" not in text:
+        checks.error("Pseudocode starter must keep END paycheck_calculator.")
 
     for marker in PSEUDOCODE_TODO_MARKERS:
         if marker not in text:
@@ -167,7 +189,7 @@ def check_pseudocode(checks: StarterChecks) -> None:
 
 
 def check_drawio(checks: StarterChecks) -> None:
-    """Verify the starter Draw.io template keeps its reference pages."""
+    """Verify starter Draw.io template keeps its reference pages."""
     try:
         root = ET.parse(DRAWIO_PATH).getroot()
     except (OSError, ET.ParseError) as exc:
@@ -183,13 +205,23 @@ def check_drawio(checks: StarterChecks) -> None:
     missing = sorted(EXPECTED_DIAGRAM_PAGES - pages)
     if missing:
         checks.error(
-            "Draw.io starter is missing template page(s): "
-            + ", ".join(missing)
+            "Draw.io starter is missing template page(s): " + ", ".join(missing)
         )
 
 
+def check_sdw(checks: StarterChecks) -> None:
+    """Verify the optional SDW keeps its guided Analyze/Design structure."""
+    text = SDW_PATH.read_text(encoding="utf-8")
+    for marker in SDW_REQUIRED_MARKERS:
+        if marker not in text:
+            checks.error(f"SDW starter is missing section: {marker!r}")
+
+    if "TODO:" not in text:
+        checks.error("SDW starter should remain intentionally incomplete.")
+
+
 def check_tests(checks: StarterChecks) -> None:
-    """Verify the optional acceptance-test suite still has four cases."""
+    """Verify optional acceptance-test suite still has four cases."""
     text = TEST_PATH.read_text(encoding="utf-8")
     try:
         tree = ast.parse(text, filename=str(TEST_PATH))
@@ -207,16 +239,13 @@ def check_tests(checks: StarterChecks) -> None:
         None,
     )
     if test_class is None:
-        checks.error(
-            "Acceptance-test class PaycheckCalculatorAcceptanceTests missing."
-        )
+        checks.error("Acceptance-test class PaycheckCalculatorAcceptanceTests missing.")
         return
 
     test_functions = {
         node.name: node
         for node in test_class.body
-        if isinstance(node, ast.FunctionDef)
-        and node.name.startswith("test_")
+        if isinstance(node, ast.FunctionDef) and node.name.startswith("test_")
     }
 
     actual = set(test_functions)
@@ -227,9 +256,7 @@ def check_tests(checks: StarterChecks) -> None:
         if missing:
             checks.error(f"Acceptance tests are missing: {', '.join(missing)}")
         if extra:
-            checks.error(
-                f"Unexpected acceptance tests found: {', '.join(extra)}"
-            )
+            checks.error(f"Unexpected acceptance tests found: {', '.join(extra)}")
 
     for test_name, expected_case in EXPECTED_TEST_CASES.items():
         function = test_functions.get(test_name)
@@ -255,15 +282,12 @@ def check_tests(checks: StarterChecks) -> None:
         if not found:
             hours, pay = expected_case
             checks.error(
-                f"Acceptance case changed in {test_name}; "
-                f"expected ({hours}, {pay})."
+                f"Acceptance case changed in {test_name}; expected ({hours}, {pay})."
             )
 
     expected_path = 'PROJECT_ROOT / "src" / "paycheck_calculator.py"'
     if expected_path not in text:
-        checks.error(
-            "Acceptance tests no longer target src/paycheck_calculator.py."
-        )
+        checks.error("Acceptance tests no longer target src/paycheck_calculator.py.")
 
 
 def main() -> None:
@@ -272,6 +296,7 @@ def main() -> None:
     check_source(checks)
     check_pseudocode(checks)
     check_drawio(checks)
+    check_sdw(checks)
     check_tests(checks)
     checks.finish()
 

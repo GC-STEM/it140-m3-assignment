@@ -2,154 +2,95 @@
 
 # IT 140 Module Three Assignment
 
-- **Course**: IT 140 - *Introduction to Scripting*
-- **Activity**: Module Three Assignment
-- **Design problem**: Employee Paycheck Calculator
-- **Graded deliverables**: `paycheck_calculator.drawio` and `paycheck_calculator.pseudo`
+- **Course:** IT 140 - *Introduction to Scripting*
+- **Activity:** Module Three Assignment
+- **Design problem:** Employee Paycheck Calculator
+- **Graded deliverables:**
+  - [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
+  - [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
 
-**Assignment progress:** **0 Start Here** → [1 Analyze](analysis/README.md) → [2 Design](design/README.md) → [3 Construct (Practice)](src/README.md) → [4 Test (Practice)](tests/README.md) → [5 Submit](#submit-your-assignment)
+**Required assignment progress:** **0 Start Here** → [1 Analyze](analysis/README.md) → [2 Design](design/README.md) → [3 Submit](#3-submit-your-assignment)
 
-## Start With the Assignment Guidelines and Rubric
-
-Before using this repository, open the **Module Three Assignment Guidelines and Rubric** in [D2L Brightspace](https://learn.snhu.edu/).
-
-Review the complete assignment, including:
-
-- Overview
-- Prompt
-- Flowchart requirements
-- Pseudocode requirements
-- What to Submit
-- AI Usage
-- Assignment Rubric
-
-The **Module Three Assignment Guidelines and Rubric** is the official source for assignment requirements, grading criteria, and submission requirements. This repository provides starter files, working files, and step-by-step guidance to help you complete those requirements.
+**Optional SDLC practice:** [Construct](src/README.md) → [Test](tests/README.md)
 
 > [!IMPORTANT]
-> This assignment is graded on the **flowchart** and **pseudocode** you create. Writing and testing a Python program is **optional practice** and is not a graded deliverable for this assignment.
+> The **Module Three Assignment Guidelines and Rubric in D2L Brightspace** is the official source for assignment requirements, grading criteria, and submission requirements. This repository provides starter files, reference documents, and step-by-step guidance to help you complete those requirements.
 
-After reviewing the Guidelines and Rubric, return here to set up your personal assignment repository.
+## What You Are Doing in Module Three
 
-## About This Repository
+In Module Two, you worked from a provided design toward a Python program. In Module Three, the focus moves earlier in the Software Development Life Cycle (SDLC): **you create the design**.
 
-This repository organizes the assignment around a simplified Software Development Life Cycle (SDLC):
+You will design a paycheck calculator that follows the company pay rules in the assignment. Your two graded files represent the same planned program in two different ways:
+
+1. A **flowchart** shows the logic visually.
+2. **Pseudocode** describes the logic as ordered, indented steps.
+
+The repository also includes optional Python construction and testing practice so you can continue through the complete simplified SDLC:
 
 > **Analyze → Design → Construct → Test**
 
-The module materials recommend working through these phases in order. For the graded assignment, you will complete the Analyze and Design work needed to produce your two design deliverables. After your designs are complete, you are encouraged to continue through Construct and Test for additional programming practice.
+For the graded Module Three assignment, however, your required path is:
 
-> [!NOTE]
-> The Codio Virtual Desktop (CVD) is the reference environment for IT 140. If you completed the [Module One Setup Tasks](https://github.com/GC-STEM/it140-m1-setup-tasks) and use the CVD for this course, Git, GitHub CLI, VS Code, Draw.io integration, pseudocode support, Python, and the expected course repository configuration should already be available. We recommend all students use the CVD for coursework to minimize environment differences and troubleshooting issues.
->
-> You may also complete this assignment on a supported local computer configured through the Module One Setup Tasks. Local environments can vary, so some commands or troubleshooting steps may differ.
+> **Analyze → Design → Submit**
 
-You will create your own personal GitHub repository from this course repository template and clone your repository to the CVD or your supported local computer. Your personal repository lets you:
+Construct and Test are optional practice and do not add graded deliverables.
 
-- Complete your assignment work
-- Save changes with Git
-- Push your work to GitHub for backup
-- Continue working from your own copy of the assignment
-- Practice a professional repository-based development workflow
-- Use automated repository checks while you work
+## What You May Edit
 
-The main assignment folders are:
+### Graded and submitted
 
-```text
-it140-m3-assignment/
-├── analysis/
-│   ├── README.md
-│   └── paycheck_calculator_srs.md
-├── design/
-│   ├── README.md
-│   ├── paycheck_calculator.drawio
-│   ├── paycheck_calculator.pseudo
-│   └── paycheck_calculator_sdd.md
-├── src/
-│   ├── README.md
-│   └── paycheck_calculator.py
-├── tests/
-│   ├── README.md
-│   └── test_paycheck_calculator.py
-├── paycheck_calculator_sdw.md
-└── README.md
+Edit and submit both of these files:
+
+- [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio) — graded flowchart
+- [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo) — graded pseudocode
+
+### Working notes; not submitted
+
+You may also edit:
+
+- [`paycheck_calculator_sdw.md`](paycheck_calculator_sdw.md) — Software Development Worksheet (SDW) working notes
+
+The SDW is a learning aid. It is not a graded deliverable unless your instructor specifically tells you otherwise.
+
+### Optional practice; not submitted
+
+After your graded designs are complete, you may edit:
+
+- [`src/paycheck_calculator.py`](src/paycheck_calculator.py) — optional Python construction practice
+
+The provided test file is a practice tool. Do not edit it to make a test pass.
+
+### Course-provided reference and support files
+
+Do not edit the SRS, SDD, README files, tests, `.github` files, repository configuration, or other course-managed files. They provide requirements, guidance, examples, checks, or configuration.
+
+## 0. Meet the Prerequisites
+
+Before starting this assignment:
+
+- [ ] Complete the GitHub and Course IDE portions of the [Module One Setup Tasks](https://github.com/GC-STEM/it140-m1-setup-tasks).
+- [ ] Complete the assigned Module Three zyBooks activities before relying on the assignment to teach decision branching from the beginning.
+- [ ] Open the **Module Three Assignment Guidelines and Rubric** in D2L Brightspace and read the complete assignment before editing the starter files.
+
+Relevant Module Three topics include `if`/`else` branching, relational operators, Boolean expressions, and code-block indentation.
+
+## 1. Set Up or Open Your Assignment Repository
+
+You create your personal `it140-m3-assignment` repository only once.
+
+### If You Have Not Created It Yet
+
+Use the VS Code integrated terminal. On Windows, use **PowerShell** or **Git Bash**, not Command Prompt (`cmd.exe`).
+
+First confirm the GitHub account you use for IT 140:
+
+```bash
+gh auth status
 ```
 
-### What You May Edit
+If the correct account is not active, use the GitHub CLI sign-in or account-switching instructions from the Module One Setup Tasks before continuing.
 
-Your required assignment work should be limited to:
-
-- [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio) — **graded flowchart deliverable**
-- [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo) — **graded pseudocode deliverable**
-
-You may also edit these working or practice files:
-
-- [`paycheck_calculator_sdw.md`](paycheck_calculator_sdw.md) — recommended Software Development Worksheet (SDW) notes; not submitted for grading
-- [`src/paycheck_calculator.py`](src/paycheck_calculator.py) — optional Python construction practice; not submitted for grading
-
-> [!IMPORTANT]
-> Do not modify the READMEs, SRS, SDD, tests, `.github` files, repository configuration, or other provided files. The automated repository checks treat those files as course-managed content.
-
-## Set Up Your Personal Assignment Repository
-
-Complete these steps only once before beginning the assignment.
-
-If you already created an `it140-m3-assignment` repository in your GitHub account or already have an `it140-m3-assignment` folder in `~/Repos`, do not repeat these setup steps. Open your existing repository instead.
-
-If you need to start over, see [Reset Your Assignment Repository](#reset-your-assignment-repository).
-
-### 1. Open the VS Code Integrated Terminal
-
-In VS Code, select:
-
-> **Terminal > New Terminal**
-
-You will use the integrated terminal in VS Code to create and clone your personal assignment repository.
-
-> [!IMPORTANT]
-> Windows users must use a **PowerShell** or **Git Bash** terminal in VS Code to run the commands in this file. A Command Prompt (`cmd.exe`) terminal will not work.
-
-### 2. Confirm Your GitHub Account
-
-1. Type the following command in the VS Code integrated terminal:
-
-   `gh auth status`
-
-2. Review the results and identify the **active account**.
-
-   - If your IT 140 GitHub account is listed but is not active, continue to Step 2.3.
-   - If your IT 140 GitHub account is not listed, continue to Step 2.4.
-   - If the correct IT 140 GitHub account is active, continue to Step 2.6.
-
-3. If your IT 140 GitHub account is listed but is not active, type the following command, replacing `your-github-username` with your GitHub username:
-
-   `gh auth switch --user your-github-username`
-
-   Then return to Step 2.1 to confirm that the correct account is now active.
-
-4. If your IT 140 GitHub account is not listed, type:
-
-   `gh auth login --web`
-
-   Follow the GitHub CLI prompts and sign in with the GitHub account you use for IT 140.
-
-5. When sign-in is complete, return to Step 2.1 and check your account again.
-
-6. Continue to Step 3 - Create and Clone Your Personal Repository.
-
-### 3. Create and Clone Your Personal Repository
-
-The following command block will:
-
-1. Go to your course `Repos` folder.
-2. Configure Git to use your GitHub CLI authentication.
-3. Bookmark the original IT 140 assignment repository so it is easier to find again.
-4. Create your personal assignment repository in GitHub from the current course template.
-5. Make your personal repository private.
-6. Clone your new repository to your CVD or local computer.
-7. Enter the cloned repository folder.
-8. Show the GitHub repository connected to your local copy.
-
-Copy the entire command block and paste it into the VS Code integrated terminal:
+Then run:
 
 ```bash
 cd ~/Repos
@@ -160,70 +101,58 @@ cd it140-m3-assignment
 git remote -v
 ```
 
-Review the final output and confirm that the repository belongs to **your GitHub account**.
+Confirm that the final remote belongs to **your GitHub account**.
 
-If a command reports an error, do not repeat the entire command block. Review the error message and use the [Help and Support](#help-and-support) resources before continuing.
+> [!NOTE]
+> These creation commands are for the first successful setup only. If a personal repository or local folder already exists, open that existing work instead of creating another repository.
 
-### 4. Open Your Assignment Repository in VS Code
+### If You Already Created It
 
-In VS Code:
+Open VS Code and select **File > Open Folder**, then open:
 
-1. Select **File > Open Folder**.
-2. Open `~/Repos/it140-m3-assignment`.
-3. Confirm that `it140-m3-assignment` is the top-level folder shown in the Explorer.
+```text
+~/Repos/it140-m3-assignment
+```
 
-You are now working in your personal copy of the Module Three Assignment.
+If you are on another computer and your personal repository exists on GitHub but not locally, clone your existing repository:
 
-## Complete the Assignment
+```bash
+cd ~/Repos
+gh repo clone "$(gh api user --jq .login)/it140-m3-assignment"
+cd it140-m3-assignment
+git status
+```
 
-### 1. Analyze the Requirements
+## 2. Complete the Assignment
 
-Open the [Analyze Phase instructions](analysis/README.md).
+### 2.1 Analyze the Requirements
 
-Use the assignment Guidelines and Rubric, the provided Software Requirements Specification (SRS), and the optional SDW to make sure you understand:
+Open [Analyze Phase](analysis/README.md).
 
-- The input the program must use
-- The pay rules the design must represent
-- The decision the program must make
-- The required output
-- The boundary between regular and overtime hours
+During Analyze, focus on **what** the paycheck calculator must do. Use:
 
-Do not begin by writing Python code. The purpose of this assignment is to practice designing the solution before constructing it.
+- the official Guidelines and Rubric in D2L Brightspace;
+- the provided [Software Requirements Specification (SRS)](analysis/paycheck_calculator_srs.md); and
+- the optional [Software Development Worksheet (SDW)](paycheck_calculator_sdw.md).
 
-### 2. Create the Graded Designs
+Pay particular attention to the distinction between the first 40 hours and hours **above 40**. Do not add requirements such as negative-input validation or exact output formatting when the assignment does not specify them.
 
-Open the [Design Phase instructions](design/README.md).
+### 2.2 Create the Graded Designs
 
-Complete both required design files:
+Open [Design Phase](design/README.md).
+
+Complete both graded files:
 
 1. [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
 2. [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
 
-Your flowchart and pseudocode should describe the **same solution**. Review both files against the assignment Guidelines and Rubric before continuing.
+Your flowchart and pseudocode must describe the **same planned program**. Compare them before submission and review each file against the current Guidelines and Rubric.
 
-### 3. Optional Practice: Construct the Python Program
+### 2.3 Save Your Work to GitHub
 
-After your graded design work is complete, you are encouraged to continue to the [Construct Phase](src/README.md).
+Save your files normally while you work in VS Code. Periodically commit and push your assignment work so your personal GitHub repository contains a current backup.
 
-Use your own completed flowchart and pseudocode as the plan for completing `src/paycheck_calculator.py`. This practice helps connect program design to working Python code.
-
-This file is **not required for the Module Three Assignment grade**.
-
-### 4. Optional Practice: Test the Python Program
-
-If you complete the optional Python program, continue to the [Test Phase](tests/README.md).
-
-Run your program with several input values, including the 40-hour boundary, and use the provided optional acceptance tests to check your implementation.
-
-Testing is **not required for the Module Three Assignment grade**, but it provides practice with the full SDLC and helps you see whether the design you created can be implemented successfully.
-
-### 5. Save Your Work to GitHub
-
-Save your files normally while you work in VS Code.
-
-Periodically commit and push your assignment work so your personal GitHub repository contains a current backup. You can do this using the **Source Control** tools in the VS Code user interface, or from the command line as described below.
-
-From the repository root in the VS Code integrated terminal, run:
+You can use the **Source Control** tools in VS Code or run the following from the repository root:
 
 ```bash
 cd ~/Repos/it140-m3-assignment
@@ -233,76 +162,62 @@ git commit -m "Save Module Three assignment progress"
 git push
 ```
 
-These commands:
+These commands stage only the student working, graded design, and optional practice files.
 
-- Show which files have changed.
-- Stage only the student working, graded deliverable, and optional practice files for this assignment.
-- Create a Git commit containing those changes.
-- Push the commit to your personal GitHub repository.
-
-If Git reports that there is nothing to commit, your local files do not contain any new changes that need to be saved to GitHub.
+If Git reports that there is nothing to commit, your local files do not contain new changes that need to be saved to GitHub.
 
 > [!NOTE]
 > GitHub is used to develop and back up your work. **Assignment submission, grading, and instructor feedback remain in D2L Brightspace.**
 
-## Review the Automated Repository Checks
+### 2.4 Review the Assignment Checks
 
-Each time you push changes to GitHub, the **Assignment Checks** workflow runs automatically in your personal repository.
+Each push runs the **Assignment Checks** workflow in your personal repository.
 
-While you are still working, a red **X** can simply mean that one or both graded design files are not finished yet. As you complete and push your work, the checks verify that:
+While you are still working, a red **X** can simply mean that one or both graded design files are still in the starter state. As you complete your work, the checks can verify basic repository conditions such as:
 
-- The provided repository files are still present and unchanged.
-- Your committed changes are limited to the student working and optional practice files identified above.
-- Both graded design files differ from their starter state.
-- `design/paycheck_calculator.drawio` remains a readable Draw.io XML file.
-- `design/paycheck_calculator.pseudo` keeps its `BEGIN` / `END` structure and no longer contains starter `TODO:` prompts.
-- Repository configuration and provided Markdown files remain readable and internally consistent.
+- required course files are still present;
+- committed changes are limited to student-editable files;
+- both graded design files changed from their starter state;
+- the Draw.io file remains readable XML;
+- the pseudocode retains its outer structure and no longer contains starter `TODO:` prompts; and
+- course-provided Markdown and configuration remain internally consistent.
 
-The active Assignment Checks **do not run or grade the optional Python program or its optional acceptance tests**. You may use those practice tools separately after your graded design work is complete.
+The Assignment Checks **do not grade the quality or correctness of your design**. A green check is not a grade and does not submit your assignment.
 
-To review a check:
+To review a run:
 
-1. Open your `it140-m3-assignment` repository on GitHub.
+1. Open your personal repository on GitHub.
 2. Select **Actions**.
 3. Open the most recent **Assignment Checks** run.
-4. Open **Check assignment repository** to see which check passed or needs attention.
+4. Open **Check assignment repository** to see the results.
 
-> [!NOTE]
-> A green check means your repository passed these automated checks. It does **not** assign a grade, guarantee a particular grade, evaluate the quality of your flowchart or pseudocode, or submit your assignment. Follow the official Module Three Assignment Guidelines and Rubric in D2L Brightspace for submission and grading requirements.
+## 3. Submit Your Assignment
 
-## Return to an Existing Assignment
+In D2L Brightspace, open the **Module Three Assignment** and follow the current submission instructions.
 
-You only create your personal assignment repository once.
+Submit exactly the two graded design files required by the assignment:
 
-When you return to the assignment later:
+- [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
+- [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
 
-1. Open VS Code.
-2. Select **File > Open Folder**.
-3. Open `~/Repos/it140-m3-assignment`.
-4. Continue working where you stopped.
+Do **not** submit the SDW, optional Python practice file, test file, GitHub Actions output, SRS, SDD, or repository README files unless your instructor specifically requests them.
 
-You do not need to create the repository from the template again.
+## Optional: Continue Through Construct and Test
 
-If you are working on another computer that does not yet have your assignment repository, clone your existing personal repository instead of creating another repository from the template:
+After both graded design files are complete and ready to submit, you may continue through the remaining SDLC phases for practice:
 
-```bash
-cd ~/Repos
-gh repo clone "$(gh api user --jq .login)/it140-m3-assignment"
-cd it140-m3-assignment
-git status
-```
+1. [Construct](src/README.md) — translate your own design into a small Python program.
+2. [Test](tests/README.md) — manually test the program and optionally run the provided acceptance tests.
 
-Then open the cloned `it140-m3-assignment` folder in VS Code.
+Optional practice is intended to help you connect design to implementation. It does not change the two-file Module Three submission.
 
-## Reset Your Assignment Repository
+## Restore or Restart Your Assignment Repository
 
-If something goes wrong, choose the recovery option that matches the problem.
+Choose the recovery method that matches the problem. Preserve existing work whenever possible.
 
-### Restore Your Local Copy From GitHub
+### Restore a Damaged Local Copy From GitHub
 
-Use this option when your files on the current computer are damaged or confusing, but the copy you previously pushed to GitHub is good.
-
-This process preserves your current local folder as a backup and then clones a fresh local copy of your personal repository.
+Use this when the copy you previously pushed to GitHub is good but the local folder is damaged or confusing.
 
 #### CVD, Linux, macOS, or Git Bash on Windows
 
@@ -324,13 +239,9 @@ cd it140-m3-assignment
 git status
 ```
 
-Your previous local folder remains in `~/Repos` with `local-backup` and a date and time added to its name.
+### Start Over From the Current Course Template
 
-### Start Over From the Original Course Template
-
-Use this option only when you want to restart the entire assignment from the original course template.
-
-This process preserves your current work by renaming your existing local assignment folder and personal GitHub repository before creating a new copy from the current course template.
+Use this only when you intentionally want a fresh assignment copy. Preserve the old local folder and GitHub repository first.
 
 #### CVD, Linux, macOS, or Git Bash on Windows
 
@@ -356,61 +267,26 @@ cd it140-m3-assignment
 git remote -v
 ```
 
-Your previous local folder and GitHub repository are preserved using the generated backup name.
-
 > [!IMPORTANT]
-> Starting over creates a new copy of the current assignment template. Work that exists only in your previous repository is not automatically copied into the new assignment repository.
+> Starting over does not automatically copy work from the preserved repository into the new one.
 
 ## Help and Support
 
-The README files contain the instructions you need to work through each SDLC phase.
+Use the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki) for supplemental explanations of the SDLC, assignment documents, flowcharts, pseudocode, course IDE tools, Git/GitHub, testing, sources, and AI use.
 
-The [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assignment/wiki) provides supplemental information about:
+- Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for questions about using this repository that do not request a completed graded solution.
+- Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided repository, starter files, documentation, automated checks, or course tools.
+- Contact your instructor through D2L Brightspace for assignment requirements, grading, feedback, or course-specific questions.
 
-- The simplified SDLC used in this assignment
-- Flowcharts and pseudocode
-- Working with assignment documents in VS Code
-- Git and GitHub workflows
-- Optional testing and debugging practice
-- Sources, citations, and AI use
-
-Use [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to report a technical problem with the provided course repository, starter files, documentation, automated checks, or course tools.
-
-Use [GitHub Discussions](https://github.com/GC-STEM/it140-m3-assignment/discussions) for repository-related questions when appropriate. Do not ask for or post completed solutions to the graded flowchart or pseudocode.
-
-Post questions about course content that are not specific to this repository in your section's **General Questions** discussion topic.
-
-For questions about assignment submissions, grading, deadlines, accommodations, or instructor feedback, contact your instructor through D2L Brightspace.
-
-## Submit Your Assignment
-
-Return to the **Module Three Assignment Guidelines and Rubric** in [D2L Brightspace](https://learn.snhu.edu/) before submitting your work.
-
-Confirm that:
-
-- Your flowchart uses the required types of symbols and arrows.
-- Your pseudocode uses clear steps, appropriate indentation, and appropriate keywords.
-- Both design files represent the same paycheck-calculation logic.
-- Your work accounts for the regular/overtime boundary described in the assignment.
-- Your final files are saved in the required formats:
-  - `.drawio`
-  - `.pseudo`
-- Your latest work is backed up in your personal GitHub repository.
-- You reviewed the latest Assignment Checks result as a development aid.
-
-Follow the **What to Submit** instructions in the Module Three Assignment Guidelines and Rubric to submit the two required design files in D2L Brightspace.
-
-Do **not** submit the SDW, SRS, SDD, optional Python program, tests, README files, or your GitHub repository unless the Module Three Assignment Guidelines and Rubric or your instructor specifically instructs you to do so.
-
-**GitHub does not submit your assignment for grading.**
+Do not post your completed graded flowchart or pseudocode publicly when asking for help.
 
 <!-- Artifact Metadata
 
 * Course: IT 140 - Introduction to Scripting
-* Artifact Title: Module Three Assignment | Start Here
-* Artifact Type: Required assignment guidance and repository workflow
-* Artifact Purpose: Guide students from the official D2L assignment requirements through personal GitHub repository setup, the SDLC design workflow, backup, automated repository checks, recovery, and final D2L submission.
-* Artifact Description: Students analyze the paycheck-calculator requirements, create the graded flowchart and pseudocode, optionally construct and test Python code, save work to GitHub, review automated repository checks, and return to D2L Brightspace to submit the required design files.
+* Artifact Title: Module Three Assignment Repository README
+* Artifact Type: Required assignment guidance
+* Artifact Purpose: Guide students through setup, analysis, design, submission, and optional SDLC practice for the Module Three Assignment.
+* Artifact Description: Students create and submit a paycheck-calculator flowchart and pseudocode; optional construction and testing practice extends the assignment through the simplified SDLC without adding graded deliverables.
 * Artifact Version: {{semantic version number}}
 * Artifact Date: {{artifact date in YYYY-MM-DD format}}
 * Development Status: {{development status}}

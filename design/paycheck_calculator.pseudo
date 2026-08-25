@@ -1,7 +1,7 @@
 # IT 140 Module Three Assignment
 # Paycheck Calculator Pseudocode Template
 #
-# Complete the TODO prompts below with your own pseudocode.
+# Complete every TODO prompt below with your own pseudocode.
 # Keep this file in .pseudo format for submission.
 #
 # Your finished pseudocode should represent the same logic as your flowchart.
@@ -12,14 +12,15 @@ BEGIN paycheck_calculator
 
     TODO: Obtain the required program input.
 
-    TODO: Use decision branching to determine which paycheck rule applies.
-        TODO: Show the processing steps for one branch.
-
-        TODO: Show the processing steps for the other branch.
+    IF TODO: Replace with the decision condition that separates the pay-rule cases THEN
+        TODO: Show the processing steps for this decision path.
+    ELSE
+        TODO: Show the processing steps for the other decision path.
+    ENDIF
 
     TODO: Output the calculated weekly paycheck.
 
 END paycheck_calculator
 
 # === References ===
-# TODO: List any references you used to complete this assignment.
+# TODO: List outside sources or assistance you actually used, or delete this line.

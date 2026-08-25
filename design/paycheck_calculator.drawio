@@ -1,14 +1,14 @@
 <mxfile host="65bd71144e">
     <diagram id="paycheck-calculator-page" name="Paycheck Calculator">
-        <mxGraphModel dx="763" dy="440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="Paycheck Calculator-title" value="&lt;h2&gt;Paycheck Calculator Flowchart&lt;/h2&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" parent="1" vertex="1">
                     <mxGeometry x="160" y="30" width="530" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="Paycheck Calculator-body" value="&lt;b&gt;TODO: Create your graded flowchart on this page.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Use the &lt;b&gt;README&lt;/b&gt; tab for template instructions. Use the &lt;b&gt;Symbols&lt;/b&gt; and &lt;b&gt;Snippets&lt;/b&gt; tabs as references for the flowchart shapes and constructs used in IT 140.&lt;br&gt;&lt;br&gt;Your completed flowchart must represent the assignment requirements using appropriate start/end, input/output, decision, and processing symbols connected with arrows.&lt;br&gt;&lt;br&gt;&lt;i&gt;Delete this instruction box when you begin your flowchart.&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;strokeWidth=1;spacing=12;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="125" y="130" width="600" height="360" as="geometry"/>
+                <mxCell id="2" value="&lt;b&gt;TODO: Create your graded flowchart on this page.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Start from the assignment requirements and your Analyze notes. Use the &lt;b&gt;Symbols&lt;/b&gt; tab for the required flowchart shapes and the &lt;b&gt;Snippets&lt;/b&gt; tab for generic examples of sequence and branching.&lt;br&gt;&lt;br&gt;Your completed chart should show the required input, processing, decision branching, output, and Start/End points. Connect every step with arrows and make sure every branch can be followed to End.&lt;br&gt;&lt;br&gt;&lt;i&gt;Delete this instruction box when you begin your graded flowchart.&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;strokeWidth=1;spacing=14;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="140" width="600" height="330" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
@@ -21,14 +21,14 @@
                 <mxCell id="README-title" value="&lt;h2&gt;How to Use This Flowchart Template&lt;/h2&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" parent="1" vertex="1">
                     <mxGeometry x="160" y="30" width="530" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="README-body" value="&lt;b&gt;1. Read the Module Three Assignment Guidelines and Rubric first.&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Work on the Paycheck Calculator tab.&lt;/b&gt; That is the page you will submit as part of the .drawio file.&lt;br&gt;&lt;br&gt;&lt;b&gt;3. Use the correct symbols.&lt;/b&gt;&amp;nbsp;Drag and drop the symbols (i.e., shapes) to your Scratchpad one at time from the Symbols tab onto your Scratchpad. NOTE. For the Annotations (i.e., Comments) symbol, first select the entire shape with dotted line and text before dragging to Scratchpad.&lt;br&gt;&lt;br&gt;&lt;b&gt;4. Use arrows to show program flow.&lt;/b&gt; Make each path through a decision easy to follow and make sure every path eventually reaches the end.&lt;br&gt;&lt;br&gt;&lt;b&gt;5. Keep the file in .drawio format.&lt;/b&gt; Save your work frequently and compare the finished flowchart with your pseudocode and the assignment rubric." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;strokeWidth=1;spacing=12;fontSize=14;" parent="1" vertex="1">
-                    <mxGeometry x="125" y="130" width="600" height="360" as="geometry"/>
+                <mxCell id="6f2VVitwZKotqvGw0nvI-1" value="&lt;b&gt;1. Read the Module Three Assignment Guidelines and Rubric first.&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Complete Analyze before designing.&lt;/b&gt; Make sure you understand the input, pay rules, 40-hour boundary, decision, and output.&lt;br&gt;&lt;br&gt;&lt;b&gt;3. Build the graded chart on the Paycheck Calculator tab.&lt;/b&gt; Do not submit the README, Symbols, Snippets, or References tabs separately; they remain inside this .drawio file as reference pages.&lt;br&gt;&lt;br&gt;&lt;b&gt;4. Use appropriate symbols and arrows.&lt;/b&gt; The official assignment specifically calls for Start/End, Input/Output, Decision, and Processing symbols.&lt;br&gt;&lt;br&gt;&lt;b&gt;5. Check every path.&lt;/b&gt; Trace a regular-hours case, exactly 40 hours, an overtime case, and the 60-hour assignment example. Every path should reach the required output and End.&lt;br&gt;&lt;br&gt;&lt;b&gt;6. Compare with your pseudocode.&lt;/b&gt; Both graded artifacts should describe the same planned program.&lt;br&gt;&lt;br&gt;&lt;b&gt;7. Keep the file in .drawio format.&lt;/b&gt; Save frequently. Do not export an image or PDF as a replacement for the required .drawio submission." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;strokeWidth=1;spacing=14;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="120" width="650" height="500" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="Symbols" id="E0RcvYQW2tOlB-kFRd9z">
-        <mxGraphModel dx="763" dy="1511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="726" dy="1578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="vU1Vuk4aWWdwwywqWB7g-0"/>
                 <mxCell id="vU1Vuk4aWWdwwywqWB7g-1" parent="vU1Vuk4aWWdwwywqWB7g-0"/>
@@ -199,7 +199,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Snippets" id="o_ZMmj7cAJ43grostlEJ">
-        <mxGraphModel dx="575" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="726" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="8w8jLf61mjaVRf8ABnd9-0"/>
                 <mxCell id="8w8jLf61mjaVRf8ABnd9-1" parent="8w8jLf61mjaVRf8ABnd9-0"/>
