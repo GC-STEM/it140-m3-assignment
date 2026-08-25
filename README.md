@@ -2,13 +2,7 @@
 
 # IT 140 Module Three Assignment
 
-- **Course:** IT 140 - *Introduction to Scripting*
-- **Activity:** Module Three Assignment
-- **Design problem:** Employee Paycheck Calculator
-- **Graded deliverables:**
-  - [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
-  - [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
-
+---
 > [!IMPORTANT]
 > **GitHub repository options**
 >
@@ -20,6 +14,15 @@
 > - 🔴 **Use this template — Do not use:** It will break the code later in this README file.
 >
 > **Faculty**: Consider selecting **Watch** → **Custom** → **Releases + Issues** to receive major repository updates and follow reported problems.
+
+---
+
+- **Course:** IT 140 - *Introduction to Scripting*
+- **Activity:** Module Three Assignment
+- **Design problem:** Employee Paycheck Calculator
+- **Graded deliverables:**
+  - [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
+  - [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
 
 **Required assignment progress:** **0 Start Here** → [1 Analyze](analysis/README.md) → [2 Design](design/README.md) → [3 Submit](#3-submit-your-assignment)
 
