@@ -1,27 +1,37 @@
-<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+<!-- To see this file in a clean, formatted view, select "Text Editor ▼" in the upper-right corner of the editor, then select "Markdown Preview". -->
 
-# IT 140 Module Three Assignment
+# IT 140 Module Three Assignment | Introduction to Pseudocode and Flowcharts
 
 ---
 
 > [!IMPORTANT]
 > **GitHub repository options**
 >
-> If you are completing this repository as part of your IT 140 assignment, do not use the GitHub options in the upper-right corner except as follows:
+> **Do not select Fork or Use this template.** These options will interfere with the repository setup commands later in this README.
 >
-> - 🟡 **Watch — Not recommended:** Notifications may confuse students and are not needed.
-> - 🔴 **Fork — Do not use:** It will break the code later in this README file.
-> - 🟢 **Star — Recommended:** Later code will bookmark this repository so it is easier to find later.
-> - 🔴 **Use this template — Do not use:** It will break the code later in this README file.
->
-> **Faculty**: Consider selecting **Watch** → **Custom** → **Releases + Issues** to receive major repository updates and follow reported problems.
+> - 🚫 **Fork — Do not use**
+> - 🚫 **Use this template — Do not use**
+> - ⭐ **Star** — The setup commands later in this README will bookmark this repository so you can find it more easily.
+> - 👁️ **Watch**
+>   - **Students:** Not recommended. Watching is not needed and may generate unnecessary notifications.
+>   - **Faculty:** Consider selecting **Watch → Custom → Releases + Issues** to receive major repository updates and follow reported issues.
 
 ---
 
-- **Course:** IT 140 - *Introduction to Scripting*
-- **Activity:** Module Three Assignment
-- **Design problem:** Employee Paycheck Calculator
-- **Graded deliverables:**
+> [!NOTE]
+> **🆕 New for 2026 C-5:** IT 140 now uses GitHub repositories to provide assignment starter files, development resources, and supporting documentation.
+>
+> If you find a problem with this GitHub repository or its instructions, or have a suggestion for improvement, please open [GitHub Issues](https://github.com/GC-STEM/it140-m3-assignment/issues) to review existing issues or create a new issue.
+
+---
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Task Title**: 3-3: Introduction to Pseudocode and Flowcharts
+- **Task Type**: Required, graded, one submission required
+- **Repository Version**: 1.0.0
+- **Repository Version Date**: 08/29/2026
+- **Design Problem**: Employee Paycheck Calculator
+- **Graded Deliverables**:
   - [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
   - [`design/paycheck_calculator.pseudo`](design/paycheck_calculator.pseudo)
 
@@ -295,16 +305,3 @@ Use the [Module Three Assignment Wiki](https://github.com/GC-STEM/it140-m3-assig
 - Contact your instructor through D2L Brightspace for assignment requirements, grading, feedback, or course-specific questions.
 
 Do not post your completed graded flowchart or pseudocode publicly when asking for help.
-
-<!-- Artifact Metadata
-
-* Course: IT 140 - Introduction to Scripting
-* Artifact Title: Module Three Assignment Repository README
-* Artifact Type: Required assignment guidance
-* Artifact Purpose: Guide students through setup, analysis, design, submission, and optional SDLC practice for the Module Three Assignment.
-* Artifact Description: Students create and submit a paycheck-calculator flowchart and pseudocode; optional construction and testing practice extends the assignment through the simplified SDLC without adding graded deliverables.
-* Artifact Version: {{semantic version number}}
-* Artifact Date: {{artifact date in YYYY-MM-DD format}}
-* Development Status: {{development status}}
-
--->
