@@ -28,8 +28,8 @@
 - **Course**: IT 140 - *Introduction to Scripting*
 - **Task Title**: 3-3: Introduction to Pseudocode and Flowcharts
 - **Task Type**: Required, graded, one submission required
-- **Repository Version**: 1.0.0
-- **Repository Version Date**: 08/29/2026
+- **Repository Version**: 1.0.1
+- **Repository Version DTG**: 2026-08-30-07-01
 - **Design Problem**: Employee Paycheck Calculator
 - **Graded Deliverables**:
   - [`design/paycheck_calculator.drawio`](design/paycheck_calculator.drawio)
