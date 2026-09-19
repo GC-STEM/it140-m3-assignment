@@ -10,18 +10,21 @@
 
 START paycheck_calculator
 
-    TODO: Obtain the required program input.
+    GET hours_worked
 
-    IF TODO: Specify the condition for the applicable pay rule.
-        TODO: List the processing steps for the true decision path.
+    IF hours_worked > 40
+        LET overtime_hours = hours_worked - 40
+        LET overtime_pay = overtime_hours * 30
+        LET weekly_pay = (40 * 20) + overtime_pay
     ELSE
-        TODO: List the processing steps for the false decision path.
+        LET weekly_pay = hours_worked * 20
     ENDIF
 
-    TODO: Output the calculated weekly paycheck.
+    PUT weekly_pay
 
 END paycheck_calculator
 
 
 # === References ===
-# TODO: List outside sources or assistance you actually used, or delete this line.
+# Introduction to Scripting, chapter 3 - course materia used to understand pseudocode.
+# OpenAI ChatGPT-used for turoring and clarification of pseudocode concepts.
